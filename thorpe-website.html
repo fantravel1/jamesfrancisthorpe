@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James Francis Thorpe - The Greatest Athlete of All Time</title>
+    <meta name="description" content="Discover the legendary story of Jim Thorpe, Olympic champion, NFL pioneer, and Native American icon who redefined athletic excellence across multiple sports.">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.jamesfrancisthorpe.com/">
+    
+    <!-- Preload hero image -->
+    <link rel="preload" as="image" href="/images/hero-thorpe.webp" type="image/webp">
+    
+    <!-- Critical CSS inline -->
+    <style>
+        :root {
+            --primary: #8B4513;
+            --secondary: #D2691E;
+            --gold: #FFD700;
+            --dark: #1a1a1a;
+            --light: #f8f6f3;
+            --text: #2c2c2c;
+            --accent: #CD853F;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--light);
+            overflow-x: hidden;
+        }
+        
+        /* Hero Critical Styles */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: linear-gradient(135deg, rgba(139,69,19,0.9), rgba(26,26,26,0.8));
+            color: white;
+            padding: 6rem 2rem 2rem;
+        }
+        
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            text-align: center;
+            z-index: 1;
+            padding: 2rem;
+            max-width: 900px;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        h1 {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+            letter-spacing: -0.02em;
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            font-weight: 300;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        /* Hero Video */
+        .hero-video {
+            width: 100%;
+            max-width: 800px;
+            margin-top: 3rem;
+            animation: fadeInUp 1.2s ease-out 0.3s both;
+        }
+        
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            background: rgba(0,0,0,0.3);
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .video-caption {
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 1.1rem;
+            opacity: 0.9;
+            font-style: italic;
+        }
+        
+        /* Read Story Button */
+        .read-story-btn {
+            display: inline-block;
+            background: transparent;
+            color: white;
+            text-decoration: none;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: 2px solid var(--gold);
+            border-radius: 50px;
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .read-story-btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--gold);
+            transition: left 0.3s ease;
+            z-index: -1;
+        }
+        
+        .read-story-btn:hover {
+            color: var(--dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255,215,0,0.4);
+        }
+        
+        .read-story-btn:hover:before {
+            left: 0;
+        }
+        
+        /* Story Link in Nav */
+        .story-link {
+            background: rgba(255,215,0,0.1);
+            border: 1px solid rgba(255,215,0,0.3);
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(26,26,26,0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-logo {
+            font-size: 2rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -0.05em;
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 0;
+            position: relative;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+        
+        .logo-name {
+            font-size: 2.2rem;
+            font-weight: 900;
+            letter-spacing: -0.02em;
+            display: block;
+        }
+        
+        .logo-title {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            color: var(--gold);
+            opacity: 0.9;
+            margin-top: 0.2rem;
+        }
+        
+        .nav-logo::before {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+        
+        .nav-logo:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .nav-logo:hover .logo-name {
+            color: var(--gold);
+            text-shadow: 0 0 20px rgba(255,215,0,0.5);
+        }
+        
+        .nav-logo:hover .logo-title {
+            color: white;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            min-height: 48px;
+            display: flex;
+            align-items: center;
+        }
+        
+        nav a:hover {
+            color: var(--gold);
+            background: rgba(255,215,0,0.1);
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Mobile Navigation */
+        .menu-toggle {
+            display: none;
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            min-width: 48px;
+            min-height: 48px;
+        }
+        
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: rgba(26,26,26,0.98);
+                flex-direction: column;
+                justify-content: start;
+                padding-top: 2rem;
+                transition: left 0.3s ease;
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .hero {
+                min-height: auto;
+                padding-bottom: 3rem;
+            }
+            
+            .hero-video {
+                margin-top: 2rem;
+            }
+            
+            .logo-name {
+                font-size: 1.5rem;
+            }
+            
+            .logo-title {
+                font-size: 0.6rem;
+            }
+            
+            nav {
+                padding: 0.8rem 1rem;
+            }
+        }
+    </style>
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="James Francis Thorpe - The Greatest Athlete">
+    <meta property="og:description" content="Discover the legendary story of Jim Thorpe, Olympic champion and sports icon">
+    <meta property="og:image" content="https://www.jamesfrancisthorpe.com/images/og-thorpe.jpg">
+    <meta property="og:url" content="https://www.jamesfrancisthorpe.com/">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="James Francis Thorpe - The Greatest Athlete">
+    <meta name="twitter:description" content="Discover the legendary story of Jim Thorpe">
+    <meta name="twitter:image" content="https://www.jamesfrancisthorpe.com/images/twitter-thorpe.jpg">
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "James Francis Thorpe",
+        "alternateName": "Jim Thorpe",
+        "birthDate": "1887-05-28",
+        "deathDate": "1953-03-28",
+        "nationality": "American",
+        "description": "Native American athlete, Olympic gold medalist, professional football and baseball player",
+        "award": ["Olympic Gold Medal - Pentathlon 1912", "Olympic Gold Medal - Decathlon 1912"],
+        "sameAs": [
+            "https://en.wikipedia.org/wiki/Jim_Thorpe",
+            "https://www.profootballhof.com/players/jim-thorpe/"
+        ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-name">JIM THORPE</span>
+                <span class="logo-title">The Greatest</span>
+            </a>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">☰</button>
+            <div class="nav-links" id="nav-links">
+                <a href="#home">Home</a>
+                <a href="/story" class="story-link">In-Depth Story</a>
+                <a href="#video-section">Watch His Story</a>
+                <a href="#legacy">Legacy</a>
+                <a href="#achievements">Achievements</a>
+                <a href="#heritage">Heritage</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <picture>
+                <source srcset="/images/hero-thorpe-mobile.webp 480w,
+                               /images/hero-thorpe-tablet.webp 768w,
+                               /images/hero-thorpe-desktop.webp 1200w"
+                       sizes="100vw"
+                       type="image/webp">
+                <img src="/images/hero-thorpe-desktop.jpg" 
+                     alt="Jim Thorpe in Olympic uniform" 
+                     width="1200" 
+                     height="800"
+                     loading="eager">
+            </picture>
+        </div>
+        <div class="hero-content">
+            <h1>James Francis Thorpe</h1>
+            <p class="hero-subtitle">Wa-Tho-Huk • "Bright Path"</p>
+            <p class="hero-description">Olympic Champion • NFL Pioneer • Baseball Legend</p>
+            <div class="hero-quote">
+                <p>"You, sir, are the greatest athlete in the world."</p>
+                <cite>- King Gustaf V of Sweden, 1912</cite>
+            </div>
+            <a href="/story" class="read-story-btn">Read His Full Story</a>
+        </div>
+        <div class="hero-video" id="video-section">
+            <div class="video-container">
+                <iframe 
+                    src="https://www.youtube.com/embed/11YlrnUE-9I?modestbranding=1&rel=0" 
+                    title="Is Jim Thorpe the Greatest Athlete of All Time?"
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen
+                    loading="lazy">
+                </iframe>
+            </div>
+            <p class="video-caption">Discover the legendary story</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Legacy Section -->
+        <section class="legacy-section" id="legacy">
+            <div class="container">
+                <h2>A Legacy Beyond Sports</h2>
+                <div class="legacy-grid">
+                    <div class="legacy-item">
+                        <div class="legacy-icon">🏅</div>
+                        <h3>Olympic Pioneer</h3>
+                        <p>First Native American to win Olympic gold for the United States, dominating both pentathlon and decathlon at the 1912 Stockholm Olympics.</p>
+                    </div>
+                    <div class="legacy-item">
+                        <div class="legacy-icon">🏈</div>
+                        <h3>Football Revolutionary</h3>
+                        <p>First president of the NFL, All-American at Carlisle, defeated powerhouse teams single-handedly with his unprecedented athletic ability.</p>
+                    </div>
+                    <div class="legacy-item">
+                        <div class="legacy-icon">⚾</div>
+                        <h3>Multi-Sport Master</h3>
+                        <p>Professional in football, baseball, and basketball. Nearly 300 MLB games with the New York Giants and other teams.</p>
+                    </div>
+                    <div class="legacy-item">
+                        <div class="legacy-icon">🦅</div>
+                        <h3>Cultural Icon</h3>
+                        <p>Member of the Sac and Fox Nation, breaking barriers and inspiring generations of Native American athletes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section class="achievements-section" id="achievements">
+            <div class="container">
+                <h2>Unmatched Excellence</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">1912</div>
+                        <div class="timeline-content">
+                            <h3>Stockholm Olympics</h3>
+                            <p>Won gold in pentathlon and decathlon, setting records that stood for decades.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">1912</div>
+                        <div class="timeline-content">
+                            <h3>Carlisle Football</h3>
+                            <p>Led team to NCAA Championship, First-team All-American.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">1913-1919</div>
+                        <div class="timeline-content">
+                            <h3>Professional Baseball</h3>
+                            <p>Played for New York Giants, Cincinnati Reds, and Boston Braves.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">1920</div>
+                        <div class="timeline-content">
+                            <h3>NFL Founding</h3>
+                            <p>First president of the American Professional Football Association (NFL).</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">1963</div>
+                        <div class="timeline-content">
+                            <h3>Hall of Fame</h3>
+                            <p>Charter inductee into the Pro Football Hall of Fame.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Heritage Section -->
+        <section class="heritage-section" id="heritage">
+            <div class="container">
+                <h2>Sac and Fox Nation Heritage</h2>
+                <div class="heritage-content">
+                    <div class="heritage-text">
+                        <p>Born Wa-Tho-Huk, meaning "Bright Path," James Francis Thorpe was a member of the Sac and Fox Nation. His Native American heritage was central to his identity and athletic prowess.</p>
+                        <p>Despite facing discrimination and the challenges of forced assimilation at the Carlisle Indian Industrial School, Thorpe's spirit remained unbroken. He transformed adversity into excellence, becoming a symbol of Native American resilience and achievement.</p>
+                        <blockquote>
+                            "I never was content unless I was trying my skill...or testing my endurance."
+                            <cite>- Jim Thorpe</cite>
+                        </blockquote>
+                    </div>
+                    <div class="heritage-image">
+                        <img src="/images/thorpe-heritage.webp" 
+                             alt="Jim Thorpe in traditional dress" 
+                             width="600" 
+                             height="400"
+                             loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <p>&copy; 2025 James Francis Thorpe Legacy Foundation. All rights reserved.</p>
+                    <p>Honoring the greatest athlete in the world.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#video-section">Watch Documentary</a>
+                    <span class="separator">•</span>
+                    <a href="#legacy">His Legacy</a>
+                    <span class="separator">•</span>
+                    <a href="#heritage">Native Heritage</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Non-critical CSS -->
+    <style>
+        /* Additional styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        section {
+            padding: 5rem 0;
+        }
+        
+        h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--dark);
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        /* Hero enhancements */
+        .hero-quote {
+            margin-top: 3rem;
+            font-style: italic;
+            opacity: 0.9;
+        }
+        
+        .hero-quote p {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .hero-quote cite {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+        
+        /* Legacy Grid */
+        .legacy-section {
+            background: white;
+        }
+        
+        .legacy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .legacy-item {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 1rem;
+            background: var(--light);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .legacy-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .legacy-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Timeline */
+        .achievements-section {
+            background: linear-gradient(135deg, #f8f6f3 0%, #ffffff 100%);
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: var(--gold);
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding: 2rem;
+            width: calc(50% - 2rem);
+            margin-bottom: 3rem;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            margin-left: 2rem;
+        }
+        
+        .timeline-year {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--gold);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            margin-bottom: 1rem;
+        }
+        
+        .timeline-content {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            top: 2rem;
+            width: 20px;
+            height: 20px;
+            background: var(--gold);
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 0 3px var(--gold);
+        }
+        
+        .timeline-item:nth-child(odd)::after {
+            right: -10px;
+        }
+        
+        .timeline-item:nth-child(even)::after {
+            left: -10px;
+        }
+        
+        /* Heritage Section */
+        .heritage-section {
+            background: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .heritage-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(139,69,19,0.05), transparent);
+            border-radius: 50%;
+        }
+        
+        .heritage-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .heritage-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        blockquote {
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--primary);
+            border-left: 4px solid var(--gold);
+            padding-left: 2rem;
+            margin: 2rem 0;
+        }
+        
+        blockquote cite {
+            display: block;
+            font-size: 1rem;
+            margin-top: 1rem;
+            color: var(--text);
+        }
+        
+        .heritage-image img {
+            width: 100%;
+            border-radius: 1rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .footer-main p {
+            margin-bottom: 0.5rem;
+            opacity: 0.9;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            font-size: 0.95rem;
+        }
+        
+        .footer-links a {
+            color: var(--gold);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            padding: 0.5rem;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        .footer-links .separator {
+            color: rgba(255,255,255,0.3);
+            user-select: none;
+        }
+        
+        @media (max-width: 768px) {
+            .footer-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .footer-links .separator {
+                display: none;
+            }
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 30px;
+            }
+            
+            .timeline-item {
+                width: calc(100% - 60px);
+                left: 60px !important;
+                margin-left: 0 !important;
+                text-align: left !important;
+            }
+            
+            .timeline-item::after {
+                left: -40px !important;
+            }
+            
+            .heritage-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .heritage-image {
+                order: -1;
+            }
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Focus states for accessibility */
+        a:focus, button:focus {
+            outline: 3px solid var(--gold);
+            outline-offset: 2px;
+        }
+        
+        /* Print styles */
+        @media print {
+            nav, .menu-toggle {
+                display: none;
+            }
+            
+            .hero {
+                min-height: auto;
+                page-break-after: always;
+            }
+        }
+    </style>
+    
+    <!-- JavaScript -->
+    <script defer>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+        
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+        });
+        
+        // Close menu on link click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuToggle.textContent = '☰';
+            });
+        });
+        
+        // Navbar scroll effect
+        let lastScroll = 0;
+        const navbar = document.getElementById('navbar');
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                navbar.style.background = 'rgba(26,26,26,0.98)';
+                navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.3)';
+            } else {
+                navbar.style.background = 'rgba(26,26,26,0.95)';
+                navbar.style.boxShadow = 'none';
+            }
+            
+            lastScroll = currentScroll;
+        });
+        
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe elements
+        document.querySelectorAll('.legacy-item, .timeline-item, .heritage-content').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

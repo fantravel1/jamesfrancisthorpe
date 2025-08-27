@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bright Path: Jim Thorpe's Complete Story</title>
+    <meta name="description" content="The complete story of Jim Thorpe (Wa-Tho-Huk), from his birth on the Sac and Fox reservation to becoming the world's greatest athlete and enduring symbol of Indigenous excellence.">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.jamesfrancisthorpe.com/story">
+    
+    <!-- Critical CSS inline -->
+    <style>
+        :root {
+            --primary: #8B4513;
+            --secondary: #D2691E;
+            --gold: #FFD700;
+            --dark: #1a1a1a;
+            --light: #f8f6f3;
+            --text: #2c2c2c;
+            --accent: #CD853F;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--light);
+            overflow-x: hidden;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(26,26,26,0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-logo {
+            font-size: 2rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -0.05em;
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 0;
+            position: relative;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+        
+        .logo-name {
+            font-size: 2.2rem;
+            font-weight: 900;
+            letter-spacing: -0.02em;
+            display: block;
+        }
+        
+        .logo-title {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            color: var(--gold);
+            opacity: 0.9;
+            margin-top: 0.2rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            min-height: 48px;
+            display: flex;
+            align-items: center;
+        }
+        
+        nav a:hover {
+            color: var(--gold);
+            background: rgba(255,215,0,0.1);
+        }
+        
+        /* Hero Section */
+        .story-hero {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: linear-gradient(135deg, rgba(139,69,19,0.9), rgba(26,26,26,0.8));
+            color: white;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+        }
+        
+        .story-hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+        }
+        
+        .story-hero .subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            font-weight: 300;
+            opacity: 0.95;
+        }
+        
+        /* Article Content */
+        .article-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        .article-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .article-content h2 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin: 3rem 0 1.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .article-content h2:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 100%;
+            background: var(--gold);
+        }
+        
+        .article-content h2:first-child {
+            margin-top: 0;
+        }
+        
+        .article-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #333;
+        }
+        
+        .article-content blockquote {
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--primary);
+            border-left: 4px solid var(--gold);
+            padding-left: 2rem;
+            margin: 2rem 0;
+            background: rgba(139,69,19,0.05);
+            padding: 1.5rem 2rem;
+            border-radius: 0.5rem;
+        }
+        
+        /* Lightning Effect */
+        .lightning-divider {
+            text-align: center;
+            margin: 3rem 0;
+            position: relative;
+        }
+        
+        .lightning-divider::before,
+        .lightning-divider::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 40%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+        
+        .lightning-divider::before {
+            left: 0;
+        }
+        
+        .lightning-divider::after {
+            right: 0;
+        }
+        
+        .lightning-divider span {
+            color: var(--gold);
+            font-size: 2rem;
+            padding: 0 1rem;
+            background: white;
+            position: relative;
+        }
+        
+        /* References Section */
+        .references {
+            margin-top: 2rem;
+            padding: 2rem;
+            background: rgba(139,69,19,0.05);
+            border-radius: 0.5rem;
+            border: 1px solid rgba(139,69,19,0.1);
+        }
+        
+        .references p {
+            font-weight: 600;
+            color: var(--primary);
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .references p:first-child {
+            margin-top: 0;
+        }
+        
+        .references ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 1rem;
+        }
+        
+        .references li {
+            padding: 0.3rem 0 0.3rem 1.5rem;
+            position: relative;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        .references li:before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: bold;
+        }
+        
+        .reference-note {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(139,69,19,0.2);
+            font-size: 0.95rem;
+            color: #666;
+        }
+        
+        /* Mobile Navigation */
+        .menu-toggle {
+            display: none;
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            min-width: 48px;
+            min-height: 48px;
+        }
+        
+        /* Back to Home Link */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            color: var(--primary);
+            transform: translateX(-5px);
+        }
+        
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: rgba(26,26,26,0.98);
+                flex-direction: column;
+                justify-content: start;
+                padding-top: 2rem;
+                transition: left 0.3s ease;
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .article-content {
+                padding: 2rem 1.5rem;
+            }
+            
+            .article-content h2 {
+                font-size: 1.8rem;
+            }
+            
+            .logo-name {
+                font-size: 1.5rem;
+            }
+            
+            .logo-title {
+                font-size: 0.6rem;
+            }
+            
+            nav {
+                padding: 0.8rem 1rem;
+            }
+        }
+    </style>
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="The Bright Path: Jim Thorpe's Complete Story">
+    <meta property="og:description" content="The complete story of Jim Thorpe, from reservation to Olympic glory">
+    <meta property="og:image" content="https://www.jamesfrancisthorpe.com/images/og-story.jpg">
+    <meta property="og:url" content="https://www.jamesfrancisthorpe.com/story">
+    <meta property="og:type" content="article">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Bright Path: Jim Thorpe's Complete Story">
+    <meta name="twitter:description" content="The complete story of the world's greatest athlete">
+    
+    <!-- Schema.org Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "The Bright Path Lit by Lightning: Jim Thorpe's Extraordinary Life",
+        "author": {
+            "@type": "Organization",
+            "name": "James Francis Thorpe Legacy Foundation"
+        },
+        "datePublished": "2025-01-01",
+        "description": "The complete story of Jim Thorpe (Wa-Tho-Huk), from his birth on the Sac and Fox reservation to becoming the world's greatest athlete.",
+        "about": {
+            "@type": "Person",
+            "name": "James Francis Thorpe"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="logo-name">JIM THORPE</span>
+                <span class="logo-title">The Greatest</span>
+            </a>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">☰</button>
+            <div class="nav-links" id="nav-links">
+                <a href="/">Home</a>
+                <a href="/#legacy">Legacy</a>
+                <a href="/#achievements">Achievements</a>
+                <a href="/#heritage">Heritage</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="story-hero">
+        <div>
+            <h1>The Bright Path Lit by Lightning</h1>
+            <p class="subtitle">Jim Thorpe's Extraordinary Life</p>
+        </div>
+    </header>
+
+    <!-- Article Content -->
+    <main class="article-container">
+        <div class="article-content">
+            <a href="/" class="back-link">
+                ← Back to Home
+            </a>
+
+            <p>When the lightning flashed across the Oklahoma sky on May 22, 1887, illuminating the path to a one-room log cabin on the Sac and Fox reservation, a child was born who would become the world's greatest athlete. His mother Charlotte named him Wa-Tho-Huk – "the bright path the lightning makes as it goes across the sky." The world would know him as Jim Thorpe, but his Native name proved prophetic: his life would blaze brilliantly across American history, illuminating both the heights of human athletic achievement and the depths of racial injustice in America.</p>
+
+            <h2>The Making of a Warrior Athlete</h2>
+            
+            <p>Jim Thorpe's early life on the Sac and Fox reservation near Prague, Oklahoma, was shaped by both traditional Native culture and devastating loss. Born to Hiram Thorpe (of Irish and Sac and Fox ancestry) and Charlotte Vieux (of French and Potawatomi heritage), young Jim grew up hunting, trapping, and participating in traditional competitions alongside his twin brother Charlie.</p>
+            
+            <p>But tragedy struck early and often: Charlie died of pneumonia at age 9, leaving Jim deeply traumatized and believing he had inherited his brother's strength. His mother died when he was 14, his father at 16, making him an orphan before he could legally vote – not that it mattered, since Native Americans wouldn't gain citizenship until 1924.</p>
+            
+            <p>The boarding school system designed to "Kill the Indian, save the man" would paradoxically create America's greatest athlete. After running away from school multiple times following Charlie's death, Jim was sent to Carlisle Indian Industrial School in Pennsylvania in 1904. This institution, founded by Captain Richard Henry Pratt, systematically erased Native culture through forced haircuts, English-only policies, and physical punishment for speaking native languages. Children's mouths were washed with lye soap for speaking their native tongues. Yet within this environment of cultural genocide, Jim Thorpe would discover his destiny.</p>
+            
+            <p>The legend began with a single jump in 1907. Walking across campus in work overalls, Thorpe saw upperclassmen practicing high jump with the bar set at 5'9" – taller than his 5'8" frame. He asked to try, borrowed some gym shoes, and cleared it easily. Coach Glenn "Pop" Warner summoned him the next morning.</p>
+            
+            <blockquote>
+                "Have I done anything wrong?" Thorpe asked.<br>
+                "Son, you've only broken the school record. That's all," Warner replied.
+            </blockquote>
+            
+            <p>When Warner suggested Thorpe try football, assuming the star trackman would be easily tackled and discouraged, Thorpe ran through the entire varsity defense twice, then walked over to Warner: "Nobody is going to tackle Jim."</p>
+
+            <div class="lightning-divider">
+                <span>⚡</span>
+            </div>
+
+            <h2>Stockholm 1912: The Pinnacle of Athletic Dominance</h2>
+            
+            <p>The 1912 Stockholm Olympics would witness the most dominant individual athletic performance in Olympic history. Thorpe arrived in Stockholm having trained on the ship's deck during the Atlantic crossing, contrary to myths about his laziness. What followed was unprecedented: he won the pentathlon by tripling his nearest competitor's score, taking first in four of five events despite never having thrown a javelin before. In the decathlon – his first and only decathlon competition – he set a world record of 8,413 points that would stand until 1948, beating Sweden's Hugo Wieslander by 688 points.</p>
+            
+            <p>The most remarkable detail? Someone stole Thorpe's track shoes before the competition. He competed in mismatched shoes – one borrowed from a teammate, one literally found in a garbage can. In those mismatched shoes, he dominated the world's best athletes in both multi-event competitions, also placing 4th in the high jump and 7th in the long jump as individual events.</p>
+            
+            <blockquote>
+                "You, sir, are the greatest athlete in the world."<br>
+                – King Gustav V of Sweden
+            </blockquote>
+            
+            <p>Thorpe's alleged response – "Thanks, King" – though possibly apocryphal, captured his unassuming nature. He returned to America as an international hero, celebrated with a ticker-tape parade on Broadway.</p>
+
+            <h2>The Football Revolutionary Who Changed the Game</h2>
+            
+            <p>At Carlisle, Thorpe didn't just play football – he revolutionized it. Under Pop Warner's innovative coaching, the Carlisle Indians became "the team that invented football," developing the overhand spiral throw, the hand-off fake, and numerous trick plays including the infamous hidden-ball play.</p>
+            
+            <p>In 1911, Thorpe led Carlisle to an 11-1 record, personally scoring all 18 points in their historic upset of Harvard, kicking four field goals with an injured ankle while rushing for 173 yards. The 1912 season proved even more dominant. Thorpe scored 29 touchdowns and 224 points (leading the nation), rushing for 1,869 yards on just 191 carries.</p>
+            
+            <p>The most symbolically charged game came against Army at West Point on November 9, 1912 – just 22 years after the Wounded Knee Massacre. Warner's pre-game speech invoked this history: "Your fathers and grandfathers fought their fathers. These men are soldiers. They are the Long Knives. You are Indians." Thorpe had a 92-yard touchdown nullified by penalty, then scored a 97-yard touchdown on the next play.</p>
+            
+            <blockquote>
+                "He never practiced in his life, and he could do anything better than any other football player I ever saw."<br>
+                – President Dwight D. Eisenhower
+            </blockquote>
+            
+            <p>Thorpe's professional football career was equally groundbreaking. The Canton Bulldogs paid him $250 per game in 1915 (equivalent to $7,800 today), and attendance jumped from 1,200 to 8,000 for his debut. He led Canton to three championships and in 1920 became the first president of the American Professional Football Association (later the NFL), making him both a founding father and the league's first superstar.</p>
+
+            <div class="lightning-divider">
+                <span>⚡</span>
+            </div>
+
+            <h2>The Stolen Gold and Decades of Injustice</h2>
+            
+            <p>Six months after his Olympic triumph, in January 1913, a Massachusetts newspaper revealed Thorpe had played semi-professional baseball for $60 per month in North Carolina during 1909-1910. While countless white college athletes did the same under assumed names with no consequences, Thorpe had used his real name. The Amateur Athletic Union's James E. Sullivan – who had prejudged the outcome before any investigation – demanded Thorpe's medals be returned, violating the IOC's own 30-day protest rule.</p>
+            
+            <p>Thorpe's forced apology, likely written by school officials, remains heartbreaking in its manufactured humility: "I hope I will be excused because of the fact that I was simply an Indian school boy and did not know all about such things." Pop Warner seized Thorpe's medals from his home and shipped them back without proper procedure. The silver medalists, Hugo Wieslander of Sweden and Ferdinand Bie of Norway, never accepted the gold medals allocated to them, always maintaining Thorpe was the rightful champion.</p>
+            
+            <p>The campaign for restoration lasted 70 years. Avery Brundage, who had finished 6th and 16th behind Thorpe in 1912 and later admitted the disqualification "helped open doors to his construction business," blocked all restoration efforts as IOC President from 1952-1972. Not until 1982, when the original protest rules were discovered "fallen behind a shelf" in the Library of Congress – proving the 30-day deadline had been violated – did momentum build.</p>
+            
+            <p>The IOC restored Thorpe as "co-champion" in 1983, and finally in 2022, after a campaign by Bright Path Strong (named for his Wa-Tho-Huk identity), declared him the sole Olympic champion, 110 years after his victories.</p>
+
+            <h2>Breaking Barriers Across Sports and Society</h2>
+            
+            <p>While less successful in baseball (.252 average over 289 games from 1913-1919), Thorpe still made history, driving in the winning run in the famous 1917 double no-hitter between Fred Toney and Hippo Vaughn. His admission that "I can't hit curves" showed refreshing honesty. John McGraw had signed him for $6,000 per year – the highest rookie salary ever at that time – without even knowing if he was right or left-handed, treating him more as publicity than player.</p>
+            
+            <p>His basketball career with "Jim Thorpe and His World-Famous Indians" (1927-1928) was only discovered in 2005 when a ticket was found in an old book. The barnstorming team, featuring players with names like "Long Time Sleep" and "War Horse," went 42-14 while touring the country, with the 39-year-old Thorpe typically playing just one quarter due to his age.</p>
+            
+            <p>Beyond his athletic achievements, Thorpe became an unexpected Hollywood advocate, appearing in over 70 films while fighting for authentic Native American representation. He co-founded the Native American Actors Guild after being denied Screen Actors Guild membership, recruited Native actors nationwide, and lobbied studios for equal pay and better roles. As "Akapamata" (caregiver) in the Native community, he used his fame to create employment networks while fighting to reclaim Sac and Fox tribal lands from the federal government.</p>
+
+            <div class="lightning-divider">
+                <span>⚡</span>
+            </div>
+
+            <h2>Personal Tragedy and the Price of Being First</h2>
+            
+            <p>Thorpe's personal life reflected the broader tragedy of Native American experience in 20th-century America. He married three times and had eight children, but faced constant sorrow. His first son, Jim Jr., died at age 2 from polio, devastating his first marriage to Iva Miller. Financial exploitation followed him everywhere – he sold his life story rights to MGM for just $1,500 and received only $15,000 for the film about his own life starring Burt Lancaster.</p>
+            
+            <p>During the Great Depression, America's greatest athlete worked as a ditch digger, construction worker, bouncer, and security guard. Alcoholism, which he developed partly to cope with discrimination and loss, worsened his situation. By 1950, he was admitted to a Philadelphia hospital as a "charity case" for lip cancer treatment.</p>
+            
+            <blockquote>
+                "We're broke... Jim has nothing but his name and his memories. He has often been exploited."<br>
+                – Patricia Thorpe
+            </blockquote>
+            
+            <p>On March 28, 1953, Jim Thorpe died of a heart attack while eating lunch in his trailer home in Lomita, California. The man King Gustav had called the world's greatest athlete died in poverty in a trailer park, briefly revived by a neighbor's CPR only to speak a few final words before passing.</p>
+            
+            <p>Even in death, controversy followed: his widow Patricia, without family consent, sold his body to two Pennsylvania towns for tourism purposes. The towns merged, renamed themselves "Jim Thorpe, Pennsylvania," and buried him there – in a place he'd never visited. Legal battles to return his remains to Oklahoma tribal lands continue today.</p>
+
+            <h2>The Undimmed Legacy of Wa-Tho-Huk</h2>
+            
+            <p>Jim Thorpe's impact transcends sports statistics. Billy Mills, the Oglala Sioux who won Olympic gold in 1964, expressed what Thorpe meant to Native Americans:</p>
+            
+            <blockquote>
+                "Jim Thorpe was beyond being a hero to me... I always thought Jim Thorpe dwelled on Mount Olympus... as if Jim Thorpe dwelled among the gods."
+            </blockquote>
+            
+            <p>At Pine Ridge School, all students were known as "the Thorpes." The Associated Press named him the Greatest Athlete of the First Half-Century in 1950, receiving 252 of 393 votes, nearly tripling Babe Ruth's 86. ABC Sports declared him Athlete of the Century in 2000. Congress designated him "Athlete of the Century" in 1999. He received the Presidential Medal of Freedom in 2024.</p>
+            
+            <p>Modern scholars position Thorpe as both athletic icon and window into the Native American experience – a symbol of survival countering beliefs that Native Americans were "a dying race." As contemporary Anishinaabe/Oneida rapper Tall Paul notes, Thorpe represents "Indigenous excellence" – "not allowing all the things that go against us in life to tear us down."</p>
+
+            <div class="lightning-divider">
+                <span>⚡</span>
+            </div>
+
+            <h2>The Bright Path Continues</h2>
+            
+            <p>Jim Thorpe's story is fundamentally about resilience in the face of systematic attempts at erasure. Born into a world that sought to destroy his culture, orphaned young, stripped of his greatest triumphs, exploited financially, and buried far from ancestral lands, he nevertheless lit a path that continues to inspire. He competed for a country that didn't recognize him as a citizen, excelled in schools designed to destroy his identity, and maintained dignity while navigating a society that treated him as both superman and second-class citizen.</p>
+            
+            <p>The restoration of his Olympic titles in 2022, 69 years after his death, represents more than correcting a historical injustice. It acknowledges what his Swedish and Norwegian competitors knew all along – that Jim Thorpe was not just a champion, but the champion, whose bright path through history illuminates both the heights of human potential and the ongoing struggle for Indigenous recognition and justice.</p>
+            
+            <p>Wa-Tho-Huk's lightning still lights the way.</p>
+
+            <div class="lightning-divider">
+                <span>⚡</span>
+            </div>
+
+            <h2>References</h2>
+            
+            <div class="references">
+                <p><strong>Primary Sources & Archives:</strong></p>
+                <ul>
+                    <li>Oklahoma Historical Society Archives</li>
+                    <li>University of North Carolina Libraries</li>
+                    <li>Library of Congress (IOC protest rules documentation)</li>
+                    <li>ExplorePAHistory</li>
+                </ul>
+
+                <p><strong>Museums & Halls of Fame:</strong></p>
+                <ul>
+                    <li>Pro Football Hall of Fame</li>
+                    <li>Baseball Hall of Fame</li>
+                    <li>U.S. Olympic & Paralympic Museum</li>
+                </ul>
+
+                <p><strong>Academic & Historical Publications:</strong></p>
+                <ul>
+                    <li>HISTORY Channel Archives</li>
+                    <li>Encyclopedia Britannica</li>
+                    <li>Biography.com</li>
+                    <li>Encyclopedia.com</li>
+                    <li>Notable Biographies</li>
+                    <li>New World Encyclopedia</li>
+                    <li>EBSCO Information Services</li>
+                    <li>Zinn Education Project</li>
+                    <li>SABR (Society for American Baseball Research)</li>
+                </ul>
+
+                <p><strong>Native American & Indigenous Sources:</strong></p>
+                <ul>
+                    <li>American Indian Magazine</li>
+                    <li>Citizen Potawatomi Nation</li>
+                    <li>Native American Rights Fund</li>
+                    <li>Native News Online</li>
+                    <li>Potawatomi Heritage</li>
+                    <li>Bright Path Strong Campaign</li>
+                    <li>Windspeaker</li>
+                </ul>
+
+                <p><strong>Sports Organizations & Media:</strong></p>
+                <ul>
+                    <li>Olympics.com</li>
+                    <li>World Athletics</li>
+                    <li>ESPN Archives</li>
+                    <li>MLB.com</li>
+                    <li>NBC 5 Dallas-Fort Worth</li>
+                    <li>NPR Sports</li>
+                    <li>ABC Sports</li>
+                </ul>
+
+                <p><strong>Documentary & Media Sources:</strong></p>
+                <ul>
+                    <li>PBS Documentary Archives</li>
+                    <li>To The Best Of Our Knowledge (Wisconsin Public Radio)</li>
+                    <li>WESA Pittsburgh</li>
+                    <li>Vox Athletica</li>
+                </ul>
+
+                <p><strong>Additional References:</strong></p>
+                <ul>
+                    <li>Wikipedia (multiple articles with citations)</li>
+                    <li>Yahoo! Sports Archives</li>
+                    <li>Shaun Connell's Historical Research</li>
+                    <li>Tom Benjey's Weblog</li>
+                    <li>Congressional Records (Athlete of the Century designation, 1999)</li>
+                    <li>Presidential Medal of Freedom Archives (2024)</li>
+                </ul>
+
+                <p class="reference-note"><em>Note: This comprehensive list represents the collective sources documenting Jim Thorpe's life and legacy. Many of these sources contain extensive bibliographies and primary source citations for further research.</em></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <p>&copy; 2025 James Francis Thorpe Legacy Foundation. All rights reserved.</p>
+                    <p>Honoring the greatest athlete in the world.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/">Return Home</a>
+                    <span class="separator">•</span>
+                    <a href="/#video-section">Watch Documentary</a>
+                    <span class="separator">•</span>
+                    <a href="/#heritage">Native Heritage</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Additional CSS -->
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 5rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .footer-main p {
+            margin-bottom: 0.5rem;
+            opacity: 0.9;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            font-size: 0.95rem;
+        }
+        
+        .footer-links a {
+            color: var(--gold);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            padding: 0.5rem;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        .footer-links .separator {
+            color: rgba(255,255,255,0.3);
+            user-select: none;
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Focus states for accessibility */
+        a:focus, button:focus {
+            outline: 3px solid var(--gold);
+            outline-offset: 2px;
+        }
+        
+        @media (max-width: 768px) {
+            .footer-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .footer-links .separator {
+                display: none;
+            }
+        }
+    </style>
+    
+    <!-- JavaScript -->
+    <script defer>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+        
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+        });
+        
+        // Close menu on link click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuToggle.textContent = '☰';
+            });
+        });
+        
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                navbar.style.background = 'rgba(26,26,26,0.98)';
+                navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.3)';
+            } else {
+                navbar.style.background = 'rgba(26,26,26,0.95)';
+                navbar.style.boxShadow = 'none';
+            }
+        });
+        
+        // Fade in article elements
+        const articleElements = document.querySelectorAll('.article-content p, .article-content h2, .article-content blockquote');
+        
+        const fadeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+        
+        articleElements.forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s ease-out';
+            fadeObserver.observe(el);
+        });
+    </script>
+</body>
+</html>
