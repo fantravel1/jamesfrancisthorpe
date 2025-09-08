@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jim Thorpe Articles & Stories - In-Depth Features</title>
+    <meta name="description" content="Explore in-depth articles about Jim Thorpe's life, from his Olympic triumphs and stolen medals to his hidden basketball career and forgotten activism.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏈</text></svg>">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.jamesfrancisthorpe.com/articles">
+    
+    <!-- Critical CSS inline -->
+    <style>
+        :root {
+            --primary: #8B4513;
+            --secondary: #D2691E;
+            --gold: #FFD700;
+            --dark: #1a1a1a;
+            --light: #f8f6f3;
+            --text: #2c2c2c;
+            --accent: #CD853F;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--light);
+            overflow-x: hidden;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(26,26,26,0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-logo {
+            font-size: 2rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -0.05em;
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 0;
+            position: relative;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+        
+        .logo-name {
+            font-size: 2.2rem;
+            font-weight: 900;
+            letter-spacing: -0.02em;
+            display: block;
+        }
+        
+        .logo-title {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            color: var(--gold);
+            opacity: 0.9;
+            margin-top: 0.2rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            min-height: 48px;
+            display: flex;
+            align-items: center;
+        }
+        
+        nav a:hover {
+            color: var(--gold);
+            background: rgba(255,215,0,0.1);
+        }
+
+        /* Articles Link in Nav */
+        .articles-link {
+            background: rgba(255,215,0,0.1);
+            border: 1px solid rgba(255,215,0,0.3);
+        }
+        
+        /* Hero Section */
+        .articles-hero {
+            min-height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: linear-gradient(135deg, rgba(139,69,19,0.9), rgba(26,26,26,0.8));
+            color: white;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+        }
+        
+        .articles-hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+        }
+        
+        .articles-hero .subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            font-weight: 300;
+            opacity: 0.95;
+        }
+        
+        /* Articles Container */
+        .articles-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        /* Category Section */
+        .category-section {
+            margin-bottom: 4rem;
+        }
+        
+        .category-title {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        
+        .category-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--gold);
+        }
+        
+        /* Articles Grid */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        /* Article Card */
+        .article-card {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .article-card a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        
+        .article-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem;
+            position: relative;
+        }
+        
+        .article-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+        
+        .article-meta {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .article-content {
+            padding: 2rem;
+        }
+        
+        .article-excerpt {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+        
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--gold);
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .read-more:hover {
+            color: var(--primary);
+            transform: translateX(5px);
+        }
+        
+        /* Featured Badge */
+        .featured-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--gold);
+            color: var(--dark);
+            padding: 0.3rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+        
+        /* Category Tags */
+        .category-tag {
+            display: inline-block;
+            background: rgba(139,69,19,0.1);
+            color: var(--primary);
+            padding: 0.3rem 1rem;
+            border-radius: 1rem;
+            font-size: 0.85rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Mobile Navigation */
+        .menu-toggle {
+            display: none;
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            min-width: 48px;
+            min-height: 48px;
+        }
+        
+        /* Intro Section */
+        .intro-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 1rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+        
+        .intro-section p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: rgba(26,26,26,0.98);
+                flex-direction: column;
+                justify-content: start;
+                padding-top: 2rem;
+                transition: left 0.3s ease;
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .logo-name {
+                font-size: 1.5rem;
+            }
+            
+            .logo-title {
+                font-size: 0.6rem;
+            }
+            
+            nav {
+                padding: 0.8rem 1rem;
+            }
+            
+            .intro-section {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Jim Thorpe Articles & Stories",
+        "description": "In-depth articles about Jim Thorpe's life, achievements, and legacy",
+        "url": "https://www.jamesfrancisthorpe.com/articles"
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="logo-name">JIM THORPE</span>
+                <span class="logo-title">The Greatest</span>
+            </a>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">☰</button>
+            <div class="nav-links" id="nav-links">
+                <a href="/">Home</a>
+                <a href="/story">Full Story</a>
+                <a href="/articles" class="articles-link">Articles</a>
+                <a href="/#heritage">Heritage</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="articles-hero">
+        <div>
+            <h1>Articles & In-Depth Features</h1>
+            <p class="subtitle">Exploring the Many Facets of Jim Thorpe's Legacy</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="articles-container">
+        <!-- Intro Section -->
+        <div class="intro-section">
+            <p>Dive deeper into the extraordinary life of Jim Thorpe through these carefully researched articles. From his Olympic triumphs to hidden chapters of his story, each piece reveals new dimensions of the world's greatest athlete.</p>
+        </div>
+
+        <!-- Olympic & Medals Section -->
+        <section class="category-section">
+            <h2 class="category-title">Olympic Legacy & Medal Restoration</h2>
+            
+            <div class="articles-grid">
+                <article class="article-card">
+                    <a href="/why-jim-thorpe-olympic-medals-taken">
+                        <div class="article-header">
+                            <div class="featured-badge">Featured</div>
+                            <h3>Why Were Jim Thorpe's Olympic Medals Taken Away?</h3>
+                            <div class="article-meta">
+                                <span class="category-tag">Olympic Scandal</span>
+                                <span class="category-tag">1913</span>
+                            </div>
+                        </div>
+                        <div class="article-content">
+                            <p class="article-excerpt">The shocking story of how $60 in baseball earnings cost Thorpe his Olympic gold medals, while white athletes who did the same faced no consequences.</p>
+                            <span class="read-more">Read full story →</span>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="article-card">
+                    <a href="/when-jim-thorpe-medals-restored">
+                        <div class="article-header">
+                            <h3>When Were Jim Thorpe's Medals Restored?</h3>
+                            <div class="article-meta">
+                                <span class="category-tag">Medal Restoration</span>
+                                <span class="category-tag">Justice</span>
+                            </div>
+                        </div>
+                        <div class="article-content">
+                            <p class="article-excerpt">The long road to justice: from partial restoration in 1983 to full vindication in 2022, 110 years after his Olympic victories.</p>
+                            <span class="read-more">Read full story →</span>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="article-card">
+                    <a href="/bright-path-strong-campaign">
+                        <div class="article-header">
+                            <h3>The Bright Path Strong Campaign</h3>
+                            <div class="article-meta">
+                                <span class="category-tag">Activism</span>
+                                <span class="category-tag">2022 Victory</span>
+                            </div>
+                        </div>
+                        <div class="article-content">
+                            <p class="article-excerpt">How Jim Thorpe's family finally won justice through a grassroots campaign named after his Sac and Fox name, Wa-Tho-Huk.</p>
+                            <span class="read-more">Read full story →</span>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Athletic Achievements Section -->
+        <section class="category-section">
+            <h2 class="category-title">Athletic Achievements & Stories</h2>
+            
+            <div class="articles-grid">
+                <article class="article-card">
+                    <a href="/what-sports-did-jim-thorpe-play">
+                        <div class="article-header">
+                            <div class="featured-badge">Popular</div>
+                            <h3>What Sports Did Jim Thorpe Play?</h3>
+                            <div class="article-meta">
+                                <span class="category-tag">Multi-Sport</span>
+                                <span class="category-tag">Career</span>
+                            </div>
+                        </div>
+                        <div class="article-content">
+                            <p class="article-excerpt">The complete list of sports mastered by the world's greatest athlete, from Olympic gold to professional football, baseball, and basketball.</p>
+                            <span class="read-more">Read full story →</span>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="article-card">
+                    <a href="/jim-thorpe-mismatched-shoes">
+                        <div class="article-header">
+                            <h3>The Mismatched Shoes Story</h3>
+                            <div class="article-meta">
+                                <span class="category-tag">1912 Olympics</span>
+                                <span class="category-tag">Iconic Moment</span>
+                            </div>
+                        </div>
+                        <div class="article-content">
+                            <p class="article-excerpt">How Jim Thorpe won Olympic gold wearing mismatched shoes found in trash—one too big, one too small—exemplifying triumph over adversity.</p>
+                            <span class="read-more">Read full story →</span>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="article-card">
+                    <a href="/jim-thorpe-vs-eisenhower">
+                        <div class="article-header">
+                            <h3>Thorpe vs. Eisenhower: The Collision</h3>
+                            <div class="article-meta">
+                                <span class="category-tag">Football</span>
+                                <span class="category-tag">1912</span>
+                            </div>
+                        </div>
+                        <div class="article-content">
+                            <p class="article-excerpt">When the future President tried to tackle Jim Thorpe at West Point, it ended Eisenhower's football career and taught him about "limitation and humility."</p>
+                            <span class="read-more">Read full story →</span>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Hidden History Section -->
+        <section class="category-section">
+            <h2 class="category-title">Hidden Chapters & Lesser-Known Stories</h2>
+            
+            <div class="articles-grid">
+                <article class="article-card">
+                    <a href="/jim-thorpe-basketball-career">
+                        <div class="article-header">
+                            <div class="featured-badge">Discovery</div>
+                            <h3>Jim Thorpe's Hidden Basketball Career</h3>
+                            <div class="article-meta">
+                                <span class="category-tag">Basketball</span>
+                                <span class="category-tag">1926-1928</span>
+                            </div>
+                        </div>
+                        <div class="article-content">
+                            <p class="article-excerpt">A 2005 ticket discovery revealed Thorpe led a barnstorming basketball team, making him the only athlete to play four sports professionally.</p>
+                            <span class="read-more">Read full story →</span>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="article-card">
+                    <a href="/native-american-actors-guild">
+                        <div class="article-header">
+                            <h3>Native American Actors Guild</h3>
+                            <div class="article-meta">
+                                <span class="category-tag">Hollywood</span>
+                                <span class="category-tag">Activism</span>
+                            </div>
+                        </div>
+                        <div class="article-content">
+                            <p class="article-excerpt">Jim Thorpe's forgotten Hollywood activism: founding the first organization fighting for Indigenous representation and fair treatment in films.</p>
+                            <span class="read-more">Read full story →</span>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="article-card">
+                    <a href="/jim-thorpe-60-dollar-scandal">
+                        <div class="article-header">
+                            <h3>The $60 That Changed Sports History</h3>
+                            <div class="article-meta">
+                                <span class="category-tag">Baseball</span>
+                                <span class="category-tag">Scandal</span>
+                            </div>
+                        </div>
+                        <div class="article-content">
+                            <p class="article-excerpt">How Jim Thorpe's summer baseball earnings—needed for survival—became the most expensive $60 in sports history.</p>
+                            <span class="read-more">Read full story →</span>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <!-- People & Relationships Section -->
+        <section class="category-section">
+            <h2 class="category-title">Key Figures & Relationships</h2>
+            
+            <div class="articles-grid">
+                <article class="article-card">
+                    <a href="/pop-warner-jim-thorpe">
+                        <div class="article-header">
+                            <h3>Pop Warner: The Coach Who Made and Betrayed</h3>
+                            <div class="article-meta">
+                                <span class="category-tag">Coaching</span>
+                                <span class="category-tag">Betrayal</span>
+                            </div>
+                        </div>
+                        <div class="article-content">
+                            <p class="article-excerpt">The complex relationship between Glenn "Pop" Warner and Jim Thorpe—from discovering his talent to abandoning him when scandal broke.</p>
+                            <span class="read-more">Read full story →</span>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <p>&copy; 2025 James Francis Thorpe Legacy Foundation. All rights reserved.</p>
+                    <p>Honoring the greatest athlete in the world.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/">Home</a>
+                    <span class="separator">•</span>
+                    <a href="/story">Full Story</a>
+                    <span class="separator">•</span>
+                    <a href="/#heritage">Native Heritage</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Additional CSS -->
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .footer-main p {
+            margin-bottom: 0.5rem;
+            opacity: 0.9;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            font-size: 0.95rem;
+        }
+        
+        .footer-links a {
+            color: var(--gold);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            padding: 0.5rem;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        .footer-links .separator {
+            color: rgba(255,255,255,0.3);
+            user-select: none;
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Focus states for accessibility */
+        a:focus, button:focus {
+            outline: 3px solid var(--gold);
+            outline-offset: 2px;
+        }
+        
+        @media (max-width: 768px) {
+            .footer-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .footer-links .separator {
+                display: none;
+            }
+        }
+    </style>
+    
+    <!-- JavaScript -->
+    <script defer>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+        
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+        });
+        
+        // Close menu on link click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuToggle.textContent = '☰';
+            });
+        });
+        
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                navbar.style.background = 'rgba(26,26,26,0.98)';
+                navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.3)';
+            } else {
+                navbar.style.background = 'rgba(26,26,26,0.95)';
+                navbar.style.boxShadow = 'none';
+            }
+        });
+        
+        // Animate cards on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe article cards
+        document.querySelectorAll('.article-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s ease-out';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
