@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop Warner: The Coach Who Made and Betrayed Jim Thorpe</title>
+    <meta name="description" content="Glenn 'Pop' Warner discovered Jim Thorpe's talent, revolutionized football with him, but ultimately betrayed him when scandal broke, seizing his Olympic medals.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏈</text></svg>">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.jamesfrancisthorpe.com/pop-warner-jim-thorpe">
+    
+    <!-- Same Critical CSS -->
+    <style>
+        :root {
+            --primary: #8B4513;
+            --secondary: #D2691E;
+            --gold: #FFD700;
+            --dark: #1a1a1a;
+            --light: #f8f6f3;
+            --text: #2c2c2c;
+            --accent: #CD853F;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--light);
+            overflow-x: hidden;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(26,26,26,0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-logo {
+            font-size: 2rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -0.05em;
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 0;
+            position: relative;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+        
+        .logo-name {
+            font-size: 2.2rem;
+            font-weight: 900;
+            letter-spacing: -0.02em;
+            display: block;
+        }
+        
+        .logo-title {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            color: var(--gold);
+            opacity: 0.9;
+            margin-top: 0.2rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            min-height: 48px;
+            display: flex;
+            align-items: center;
+        }
+        
+        nav a:hover {
+            color: var(--gold);
+            background: rgba(255,215,0,0.1);
+        }
+        
+        /* Hero Section */
+        .story-hero {
+            min-height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: linear-gradient(135deg, rgba(26,26,26,0.9), rgba(139,69,19,0.8));
+            color: white;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+        }
+        
+        .story-hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+        }
+        
+        .story-hero .subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.6rem);
+            font-weight: 300;
+            opacity: 0.95;
+        }
+        
+        /* Article Content */
+        .article-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        .article-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .article-content h2 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin: 3rem 0 1.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .article-content h2:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 100%;
+            background: var(--gold);
+        }
+        
+        .article-content h2:first-child {
+            margin-top: 0;
+        }
+        
+        .article-content h3 {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin: 2rem 0 1rem;
+        }
+        
+        .article-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #333;
+        }
+        
+        .article-content ul {
+            margin: 1rem 0 2rem 2rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .article-content li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .article-content blockquote {
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--primary);
+            border-left: 4px solid var(--gold);
+            padding-left: 2rem;
+            margin: 2rem 0;
+            background: rgba(139,69,19,0.05);
+            padding: 1.5rem 2rem;
+            border-radius: 0.5rem;
+        }
+        
+        .discovery-box {
+            background: rgba(255,215,0,0.1);
+            border: 2px solid var(--gold);
+            border-radius: 0.5rem;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .betrayal-box {
+            background: rgba(139,69,19,0.1);
+            border: 2px solid var(--primary);
+            border-radius: 0.5rem;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .comparison-item {
+            padding: 1.5rem;
+            background: rgba(139,69,19,0.05);
+            border-radius: 0.5rem;
+        }
+        
+        .comparison-item h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            color: var(--primary);
+            transform: translateX(-5px);
+        }
+        
+        /* Mobile Navigation */
+        .menu-toggle {
+            display: none;
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            min-width: 48px;
+            min-height: 48px;
+        }
+        
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: rgba(26,26,26,0.98);
+                flex-direction: column;
+                justify-content: start;
+                padding-top: 2rem;
+                transition: left 0.3s ease;
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .article-content {
+                padding: 2rem 1.5rem;
+            }
+            
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .logo-name {
+                font-size: 1.5rem;
+            }
+            
+            .logo-title {
+                font-size: 0.6rem;
+            }
+            
+            nav {
+                padding: 0.8rem 1rem;
+            }
+        }
+    </style>
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Pop Warner: The Coach Who Made and Betrayed Jim Thorpe",
+        "datePublished": "2025-01-08",
+        "description": "The complex relationship between Glenn 'Pop' Warner and Jim Thorpe",
+        "author": {
+            "@type": "Organization",
+            "name": "James Francis Thorpe Legacy Foundation"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="logo-name">JIM THORPE</span>
+                <span class="logo-title">The Greatest</span>
+            </a>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">☰</button>
+            <div class="nav-links" id="nav-links">
+                <a href="/#legacy">Legacy</a>
+                <a href="/#achievements">Achievements</a>
+                <a href="/#heritage">Heritage</a>
+                <a href="/story">Full Story</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="story-hero">
+        <div>
+            <h1>Pop Warner & Jim Thorpe</h1>
+            <p class="subtitle">The Coach Who Made and Betrayed a Legend</p>
+        </div>
+    </header>
+
+    <!-- Article Content -->
+    <main class="article-container">
+        <div class="article-content">
+            <a href="/" class="back-link">
+                ← Back to Home
+            </a>
+
+            <p>Glenn "Pop" Warner's relationship with Jim Thorpe represents one of sports history's most complex coach-athlete dynamics—instrumental in Thorpe's rise, yet complicit in his downfall.</p>
+
+            <h2>Warner's Discovery of Thorpe (1907)</h2>
+            
+            <div class="discovery-box">
+                <p>The legend began with a single jump. Walking across campus in work overalls, Thorpe saw upperclassmen practicing high jump with the bar set at 5'9"—taller than his 5'8" frame. He asked to try, cleared it easily in work boots.</p>
+                
+                <blockquote>
+                    "Have I done anything wrong?" Thorpe asked when summoned the next morning.<br>
+                    "Son, you've only broken the school record. That's all," Warner replied.
+                </blockquote>
+            </div>
+
+            <p>Initially, Warner doubted Thorpe could play football, assuming the track star would be easily discouraged. When Thorpe ran through the entire varsity defense twice, then walked over saying "Nobody is going to tackle Jim," Warner realized he had discovered something extraordinary.</p>
+
+            <h2>Revolutionary Coaching Partnership</h2>
+            
+            <p>Together, Warner and Thorpe transformed football:</p>
+            
+            <ul>
+                <li>Warner invented plays specifically for Thorpe's abilities</li>
+                <li>Developed the spiral pass, hidden ball play, and double-wing formation</li>
+                <li>Used Thorpe as psychological weapon against opponents</li>
+                <li>Built Carlisle into "the team that invented football"</li>
+                <li>Defeated powerhouse teams like Harvard and Army</li>
+            </ul>
+            
+            <p>Warner understood Thorpe's value extended beyond physical ability. Before games, he would announce, "Jim Thorpe will be playing today," watching opposing teams' confidence visibly deflate.</p>
+
+            <h2>Financial Exploitation</h2>
+            
+            <div class="comparison-grid">
+                <div class="comparison-item">
+                    <h4>Warner's Compensation</h4>
+                    <ul>
+                        <li>$1,200+ annually at Carlisle</li>
+                        <li>Among highest-paid coaches</li>
+                        <li>Additional income from exhibitions</li>
+                        <li>Built national reputation</li>
+                    </ul>
+                </div>
+                
+                <div class="comparison-item">
+                    <h4>Thorpe's Compensation</h4>
+                    <ul>
+                        <li>No salary or stipend</li>
+                        <li>Room and board only</li>
+                        <li>No share of gate receipts</li>
+                        <li>Punished if caught working</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <p>The financial disparity was stark. Warner knew about Thorpe's semi-pro baseball but stayed silent, likely encouraging it to keep his star athlete financially dependent. While Warner earned a comfortable living, Thorpe needed summer income to survive.</p>
+
+            <h2>The Betrayal (1913)</h2>
+            
+            <div class="betrayal-box">
+                <h3>When the Scandal Broke</h3>
+                <ul>
+                    <li>Warner claimed complete ignorance about the baseball playing</li>
+                    <li>Never defended Thorpe publicly despite knowing many athletes did same</li>
+                    <li>Seized Thorpe's Olympic medals from his room without permission</li>
+                    <li>Mailed them to IOC without following proper procedure</li>
+                    <li>Protected his own reputation at Thorpe's expense</li>
+                </ul>
+            </div>
+
+            <p>Warner's actions during the crisis revealed his true priorities. Rather than standing by his athlete or acknowledging the widespread practice of summer baseball, he distanced himself completely. He even helped craft the humiliating apology letter emphasizing Thorpe's supposed ignorance as "just an Indian school boy."</p>
+
+            <h2>Warner's Later Admissions</h2>
+            
+            <p>Years later, Warner's statements revealed his guilt:</p>
+            
+            <ul>
+                <li>Called Thorpe "greatest athlete who ever lived"</li>
+                <li>Admitted "Jim had no informed guidance" about eligibility</li>
+                <li>Never apologized for role in medal stripping</li>
+                <li>Continued coaching career, earning fortune while Thorpe struggled</li>
+                <li>Took credit for Thorpe's achievements in his autobiography</li>
+            </ul>
+
+            <blockquote>
+                "Jim had no informed guidance about eligibility rules. He was naive about such things."<br>
+                - Pop Warner (years after betraying Thorpe)
+            </blockquote>
+
+            <h2>The Pattern of Exploitation</h2>
+            
+            <p>Warner's treatment of Thorpe exemplified broader exploitation of Native American athletes:</p>
+            
+            <ul>
+                <li>Used their talents for institutional glory</li>
+                <li>Denied them agency or fair treatment</li>
+                <li>Abandoned them when controversy arose</li>
+                <li>Profited from their abilities while they remained poor</li>
+                <li>Took credit for their natural abilities</li>
+            </ul>
+            
+            <p>Warner pioneered modern football partly through Indigenous players he recruited, yet consistently failed to protect or advocate for them. His innovations came from adapting Native American athletic traditions and the unique talents of players like Thorpe.</p>
+
+            <h2>The Lasting Impact</h2>
+            
+            <p>The Warner-Thorpe relationship left complex legacies:</p>
+            
+            <h3>Positive Contributions:</h3>
+            <ul>
+                <li>Revolutionary football strategies still used today</li>
+                <li>Proved Native American athletic excellence</li>
+                <li>Created opportunities for Indigenous athletes</li>
+                <li>Challenged racial stereotypes through success</li>
+            </ul>
+            
+            <h3>Negative Legacy:</h3>
+            <ul>
+                <li>Set pattern for exploitation of minority athletes</li>
+                <li>Demonstrated how coaches profit while athletes suffer</li>
+                <li>Showed institutional cowardice in face of controversy</li>
+                <li>Revealed racial dynamics in early American sports</li>
+            </ul>
+
+            <h2>A Complex Truth</h2>
+            
+            <p>Pop Warner discovered Jim Thorpe's greatness, provided the platform for his achievements, and revolutionized football through their partnership. But when Thorpe needed him most, Warner chose self-preservation over loyalty, seizing the medals of the man he called the greatest athlete who ever lived.</p>
+            
+            <p>Their story remains a cautionary tale about power dynamics in sports, the exploitation of minority athletes, and how those who profit from greatness often abandon it in crisis. Warner's name lives on in youth football, while Thorpe died in poverty—a final injustice in their unequal partnership.</p>
+
+            <div class="back-link" style="margin-top: 3rem;">
+                <a href="/why-jim-thorpe-olympic-medals-taken">→ Read About the Medal Scandal</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <p>&copy; 2025 James Francis Thorpe Legacy Foundation. All rights reserved.</p>
+                    <p>Honoring the greatest athlete in the world.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/">Home</a>
+                    <span class="separator">•</span>
+                    <a href="/story">Full Story</a>
+                    <span class="separator">•</span>
+                    <a href="/#heritage">Native Heritage</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Additional CSS and JavaScript (same as other pages) -->
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 5rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .footer-main p {
+            margin-bottom: 0.5rem;
+            opacity: 0.9;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            font-size: 0.95rem;
+        }
+        
+        .footer-links a {
+            color: var(--gold);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            padding: 0.5rem;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        .footer-links .separator {
+            color: rgba(255,255,255,0.3);
+            user-select: none;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        a:focus, button:focus {
+            outline: 3px solid var(--gold);
+            outline-offset: 2px;
+        }
+        
+        @media (max-width: 768px) {
+            .footer-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .footer-links .separator {
+                display: none;
+            }
+        }
+    </style>
+    
+    <script defer>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+        
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+        });
+        
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuToggle.textContent = '☰';
+            });
+        });
+        
+        const navbar = document.getElementById('navbar');
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                navbar.style.background = 'rgba(26,26,26,0.98)';
+                navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.3)';
+            } else {
+                navbar.style.background = 'rgba(26,26,26,0.95)';
+                navbar.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
