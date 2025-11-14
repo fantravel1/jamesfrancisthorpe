@@ -354,14 +354,45 @@
         }
     </style>
     
-    <!-- Schema.org -->
+    <!-- Enhanced Schema.org -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "AboutPage",
         "name": "About James Francis Thorpe Legacy Foundation",
         "description": "Mission and contact information for the Jim Thorpe website",
-        "url": "https://www.jamesfrancisthorpe.com/about"
+        "url": "https://www.jamesfrancisthorpe.com/about",
+        "mainEntity": {
+            "@type": "Organization",
+            "name": "James Francis Thorpe Legacy Foundation",
+            "description": "Honoring and preserving the legacy of Jim Thorpe, the world's greatest athlete",
+            "url": "https://www.jamesfrancisthorpe.com/",
+            "foundingDate": "2025",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "email": "info@jamesfrancisthorpe.com",
+                "contactType": "General Inquiries"
+            }
+        }
+    }
+    </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.jamesfrancisthorpe.com/"
+        },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "About",
+            "item": "https://www.jamesfrancisthorpe.com/about"
+        }]
     }
     </script>
 </head>

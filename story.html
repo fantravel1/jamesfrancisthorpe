@@ -293,6 +293,59 @@
             min-height: 48px;
         }
         
+        /* Reading Progress Bar */
+        .reading-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gold), var(--primary));
+            z-index: 1001;
+            transition: width 0.1s ease;
+        }
+
+        /* Article Meta Top */
+        .article-meta-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 1.5rem 0;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--light);
+        }
+
+        .reading-time {
+            font-size: 1rem;
+            color: #666;
+            font-weight: 600;
+        }
+
+        .share-buttons-inline {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .share-label {
+            font-size: 0.95rem;
+            color: #666;
+            font-weight: 600;
+        }
+
+        .share-icon {
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            display: inline-block;
+        }
+
+        .share-icon:hover {
+            transform: translateY(-3px) scale(1.1);
+        }
+
         /* Back to Home Link */
         .back-link {
             display: inline-flex;
@@ -301,13 +354,63 @@
             color: var(--gold);
             text-decoration: none;
             font-weight: 600;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
             transition: all 0.3s ease;
         }
-        
+
         .back-link:hover {
             color: var(--primary);
             transform: translateX(-5px);
+        }
+
+        /* Related Articles */
+        .related-articles {
+            margin-top: 4rem;
+            padding: 3rem;
+            background: var(--light);
+            border-radius: 1rem;
+            border-top: 4px solid var(--gold);
+        }
+
+        .related-articles h3 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .related-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 0.8rem;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .related-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            border-left-color: var(--gold);
+        }
+
+        .related-card h4 {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .related-card p {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.5;
         }
         
         @media (max-width: 768px) {
@@ -366,22 +469,48 @@
     <meta name="twitter:title" content="The Bright Path: Jim Thorpe's Complete Story">
     <meta name="twitter:description" content="The complete story of the world's greatest athlete">
     
-    <!-- Schema.org Article -->
+    <!-- Enhanced Article Schema -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "The Bright Path Lit by Lightning: Jim Thorpe's Extraordinary Life",
+        "alternativeHeadline": "Complete Biography of Jim Thorpe, The World's Greatest Athlete",
         "author": {
             "@type": "Organization",
             "name": "James Francis Thorpe Legacy Foundation"
         },
         "datePublished": "2025-01-01",
+        "dateModified": "2025-01-08",
         "description": "The complete story of Jim Thorpe (Wa-Tho-Huk), from his birth on the Sac and Fox reservation to becoming the world's greatest athlete.",
         "about": {
             "@type": "Person",
-            "name": "James Francis Thorpe"
-        }
+            "name": "James Francis Thorpe",
+            "alternateName": "Jim Thorpe"
+        },
+        "wordCount": "3500",
+        "timeRequired": "PT15M",
+        "articleSection": "Biography",
+        "keywords": "Jim Thorpe, Native American athletes, Olympic gold medals, 1912 Olympics, NFL history, Carlisle Indians, Sac and Fox Nation"
+    }
+    </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.jamesfrancisthorpe.com/"
+        },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Jim Thorpe's Complete Story",
+            "item": "https://www.jamesfrancisthorpe.com/story"
+        }]
     }
     </script>
 </head>
@@ -404,6 +533,9 @@
         </div>
     </nav>
 
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress" id="reading-progress"></div>
+
     <!-- Hero Section -->
     <header class="story-hero">
         <div>
@@ -418,6 +550,17 @@
             <a href="/" class="back-link">
                 ← Back to Home
             </a>
+
+            <!-- Reading Time & Share -->
+            <div class="article-meta-top">
+                <span class="reading-time">⏱️ 15 min read</span>
+                <div class="share-buttons-inline">
+                    <span class="share-label">Share:</span>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.jamesfrancisthorpe.com/story" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook" class="share-icon">📘</a>
+                    <a href="https://twitter.com/intent/tweet?url=https://www.jamesfrancisthorpe.com/story&text=The Bright Path: Jim Thorpe's Complete Story" target="_blank" rel="noopener noreferrer" aria-label="Share on Twitter" class="share-icon">𝕏</a>
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.jamesfrancisthorpe.com/story" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn" class="share-icon">💼</a>
+                </div>
+            </div>
 
             <p>When the lightning flashed across the Oklahoma sky on May 22, 1887, illuminating the path to a one-room log cabin on the Sac and Fox reservation, a child was born who would become the world's greatest athlete. His mother Charlotte named him Wa-Tho-Huk – "the bright path the lightning makes as it goes across the sky." The world would know him as Jim Thorpe, but his Native name proved prophetic: his life would blaze brilliantly across American history, illuminating both the heights of human athletic achievement and the depths of racial injustice in America.</p>
 
@@ -612,6 +755,29 @@
 
                 <p class="reference-note"><em>Note: This comprehensive list represents the collective sources documenting Jim Thorpe's life and legacy. Many of these sources contain extensive bibliographies and primary source citations for further research.</em></p>
             </div>
+
+            <!-- Related Articles -->
+            <div class="related-articles">
+                <h3>Explore More About Jim Thorpe</h3>
+                <div class="related-grid">
+                    <a href="/why-jim-thorpe-olympic-medals-taken" class="related-card">
+                        <h4>Why Were His Medals Taken?</h4>
+                        <p>The shocking story of the $60 scandal that cost Thorpe his Olympic gold medals.</p>
+                    </a>
+                    <a href="/when-jim-thorpe-medals-restored" class="related-card">
+                        <h4>Medal Restoration Victory</h4>
+                        <p>The 110-year journey to justice and full Olympic recognition in 2022.</p>
+                    </a>
+                    <a href="/jim-thorpe-mismatched-shoes" class="related-card">
+                        <h4>The Mismatched Shoes Story</h4>
+                        <p>How Thorpe won Olympic gold wearing mismatched shoes found in trash.</p>
+                    </a>
+                    <a href="/articles" class="related-card">
+                        <h4>View All Articles →</h4>
+                        <p>Discover more in-depth features about Jim Thorpe's extraordinary life.</p>
+                    </a>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -746,7 +912,7 @@
         
         // Fade in article elements
         const articleElements = document.querySelectorAll('.article-content p, .article-content h2, .article-content blockquote');
-        
+
         const fadeObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -758,12 +924,24 @@
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
         });
-        
+
         articleElements.forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(20px)';
             el.style.transition = 'all 0.6s ease-out';
             fadeObserver.observe(el);
+        });
+
+        // Reading progress bar
+        const progressBar = document.getElementById('reading-progress');
+
+        window.addEventListener('scroll', () => {
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight - windowHeight;
+            const scrolled = window.scrollY;
+            const progress = (scrolled / documentHeight) * 100;
+
+            progressBar.style.width = progress + '%';
         });
     </script>
 </body>

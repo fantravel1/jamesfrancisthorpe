@@ -338,21 +338,102 @@
     <meta name="twitter:description" content="Discover the legendary story of Jim Thorpe">
     <meta name="twitter:image" content="https://www.jamesfrancisthorpe.com/images/twitter-thorpe.jpg">
     
-    <!-- Schema.org -->
+    <!-- Enhanced Schema.org Markup for SEO & AEO -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "James Francis Thorpe",
-        "alternateName": "Jim Thorpe",
+        "alternateName": ["Jim Thorpe", "Wa-Tho-Huk", "Bright Path"],
         "birthDate": "1887-05-28",
         "deathDate": "1953-03-28",
-        "nationality": "American",
-        "description": "Native American athlete, Olympic gold medalist, professional football and baseball player",
-        "award": ["Olympic Gold Medal - Pentathlon 1912", "Olympic Gold Medal - Decathlon 1912"],
+        "birthPlace": {
+            "@type": "Place",
+            "name": "Sac and Fox Nation Reservation, Oklahoma"
+        },
+        "nationality": {
+            "@type": "Country",
+            "name": "United States"
+        },
+        "description": "Native American athlete, Olympic gold medalist, professional football and baseball player, widely considered the greatest athlete of the first half of the 20th century",
+        "award": [
+            "Olympic Gold Medal - Pentathlon 1912",
+            "Olympic Gold Medal - Decathlon 1912",
+            "Pro Football Hall of Fame 1963",
+            "Associated Press Athlete of the Half-Century 1950",
+            "Presidential Medal of Freedom 2024"
+        ],
+        "knowsAbout": ["Track and Field", "American Football", "Baseball", "Basketball"],
+        "jobTitle": ["First NFL President", "Professional Athlete", "Actor"],
+        "memberOf": {
+            "@type": "SportsTeam",
+            "name": "Carlisle Indians"
+        },
         "sameAs": [
             "https://en.wikipedia.org/wiki/Jim_Thorpe",
-            "https://www.profootballhof.com/players/jim-thorpe/"
+            "https://www.profootballhof.com/players/jim-thorpe/",
+            "https://www.wikidata.org/wiki/Q314523"
+        ]
+    }
+    </script>
+
+    <!-- Website Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "James Francis Thorpe - The Greatest Athlete",
+        "url": "https://www.jamesfrancisthorpe.com/",
+        "description": "Official legacy website honoring Jim Thorpe, Olympic champion and Native American icon",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://www.jamesfrancisthorpe.com/?s={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+
+    <!-- FAQ Schema for AEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Who was Jim Thorpe?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Jim Thorpe (1887-1953), born Wa-Tho-Huk meaning 'Bright Path,' was a Native American athlete widely considered the greatest athlete of the first half of the 20th century. He won Olympic gold medals in both pentathlon and decathlon at the 1912 Stockholm Olympics and excelled in professional football, baseball, and basketball."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What sports did Jim Thorpe play?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Jim Thorpe was a multi-sport athlete who excelled in track and field (Olympic gold), American football (first NFL president), professional baseball (MLB), and basketball. He also competed in lacrosse, ballroom dancing, and swimming, making him one of the most versatile athletes in history."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Why were Jim Thorpe's Olympic medals taken away?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Jim Thorpe's Olympic medals were stripped in 1913 because he had played semi-professional baseball for $60 per month before the Olympics, violating amateur status rules. However, many white athletes did the same without consequences. His medals were fully restored in 2022, 110 years after his victories."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What was Jim Thorpe's Native American heritage?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Jim Thorpe was a member of the Sac and Fox Nation with mixed Native American heritage including Sac and Fox from his father and Potawatomi from his mother. His Native name was Wa-Tho-Huk, meaning 'the bright path the lightning makes as it goes across the sky.'"
+                }
+            }
         ]
     }
     </script>
@@ -492,12 +573,81 @@
                         </blockquote>
                     </div>
                     <div class="heritage-image">
-                        <img src="/image/Student-Information-Card.jpg" 
-                             alt="Jim Thorpe's Student Information Card" 
-                             width="600" 
+                        <img src="/image/Student-Information-Card.jpg"
+                             alt="Jim Thorpe's Student Information Card from Carlisle Indian Industrial School showing his enrollment details"
+                             width="600"
                              height="400"
                              loading="lazy">
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section for AEO -->
+        <section class="faq-section" id="faq">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>Who was Jim Thorpe?</h3>
+                        <p>Jim Thorpe (1887-1953), born Wa-Tho-Huk meaning "Bright Path," was a Native American athlete widely considered the greatest athlete of the first half of the 20th century. He won Olympic gold medals in both pentathlon and decathlon at the 1912 Stockholm Olympics and excelled in professional football, baseball, and basketball.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>What sports did Jim Thorpe play?</h3>
+                        <p>Jim Thorpe was a multi-sport athlete who excelled in track and field (Olympic gold), American football (first NFL president), professional baseball (MLB), and basketball. He also competed in lacrosse, ballroom dancing, and swimming, making him one of the most versatile athletes in history.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Why were Jim Thorpe's Olympic medals taken away?</h3>
+                        <p>Jim Thorpe's Olympic medals were stripped in 1913 because he had played semi-professional baseball for $60 per month before the Olympics, violating amateur status rules. However, many white athletes did the same without consequences. His medals were fully restored in 2022, 110 years after his victories.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>What was Jim Thorpe's Native American heritage?</h3>
+                        <p>Jim Thorpe was a member of the Sac and Fox Nation with mixed Native American heritage including Sac and Fox from his father and Potawatomi from his mother. His Native name was Wa-Tho-Huk, meaning "the bright path the lightning makes as it goes across the sky."</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>When did Jim Thorpe get his medals back?</h3>
+                        <p>Jim Thorpe was partially restored as "co-champion" in 1983, 30 years after his death. In 2022, the IOC fully restored him as the sole Olympic champion in both pentathlon and decathlon, 110 years after his historic 1912 victories.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>How did Jim Thorpe impact Native American representation?</h3>
+                        <p>Jim Thorpe broke barriers as the first Native American to win Olympic gold for the United States. He later co-founded the Native American Actors Guild in Hollywood, fighting for authentic Indigenous representation and fair treatment in the entertainment industry.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter-section">
+            <div class="container">
+                <div class="newsletter-box">
+                    <h2>Stay Connected to Jim Thorpe's Legacy</h2>
+                    <p>Receive updates about new articles, historical discoveries, and events honoring the world's greatest athlete.</p>
+                    <form class="newsletter-form" action="#" method="post" aria-label="Newsletter signup form">
+                        <input type="email" name="email" placeholder="Enter your email address" required aria-label="Email address">
+                        <button type="submit" class="newsletter-btn">Subscribe Now</button>
+                    </form>
+                    <p class="newsletter-privacy">We respect your privacy. Unsubscribe anytime.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Share Section -->
+        <section class="social-share-section">
+            <div class="container">
+                <h3>Share Jim Thorpe's Story</h3>
+                <div class="social-buttons">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.jamesfrancisthorpe.com/" target="_blank" rel="noopener noreferrer" class="social-btn facebook" aria-label="Share on Facebook">
+                        <span>📘</span> Facebook
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?url=https://www.jamesfrancisthorpe.com/&text=Discover the legendary story of Jim Thorpe, the world's greatest athlete" target="_blank" rel="noopener noreferrer" class="social-btn twitter" aria-label="Share on Twitter">
+                        <span>𝕏</span> Twitter
+                    </a>
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.jamesfrancisthorpe.com/&title=James Francis Thorpe - The Greatest Athlete" target="_blank" rel="noopener noreferrer" class="social-btn linkedin" aria-label="Share on LinkedIn">
+                        <span>💼</span> LinkedIn
+                    </a>
+                    <a href="mailto:?subject=Check out Jim Thorpe's story&body=I thought you'd be interested in this: https://www.jamesfrancisthorpe.com/" class="social-btn email" aria-label="Share via email">
+                        <span>✉️</span> Email
+                    </a>
                 </div>
             </div>
         </section>
@@ -819,10 +969,207 @@
             nav, .menu-toggle {
                 display: none;
             }
-            
+
             .hero {
                 min-height: auto;
                 page-break-after: always;
+            }
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background: white;
+            padding: 5rem 0;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .faq-item {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 1rem;
+            border-left: 4px solid var(--gold);
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-left-color: var(--primary);
+        }
+
+        .faq-item h3 {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .faq-item p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        /* Newsletter Section */
+        .newsletter-section {
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            padding: 5rem 0;
+            color: white;
+        }
+
+        .newsletter-box {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .newsletter-box h2 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+
+        .newsletter-box > p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 1rem;
+            max-width: 600px;
+            margin: 0 auto 1rem;
+            flex-wrap: wrap;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            min-width: 250px;
+            padding: 1rem 1.5rem;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 50px;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-form input::placeholder {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .newsletter-form input:focus {
+            outline: none;
+            border-color: var(--gold);
+            background: rgba(255,255,255,0.15);
+        }
+
+        .newsletter-btn {
+            padding: 1rem 2.5rem;
+            background: var(--gold);
+            color: var(--dark);
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 180px;
+        }
+
+        .newsletter-btn:hover {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255,215,0,0.4);
+        }
+
+        .newsletter-privacy {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Social Share Section */
+        .social-share-section {
+            background: var(--light);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .social-share-section h3 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 2rem;
+        }
+
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            color: white;
+        }
+
+        .social-btn span {
+            font-size: 1.3rem;
+        }
+
+        .social-btn.facebook {
+            background: #1877f2;
+        }
+
+        .social-btn.twitter {
+            background: #000000;
+        }
+
+        .social-btn.linkedin {
+            background: #0a66c2;
+        }
+
+        .social-btn.email {
+            background: var(--primary);
+        }
+
+        .social-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        /* Mobile Responsive for new sections */
+        @media (max-width: 768px) {
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .newsletter-form input {
+                min-width: 100%;
+            }
+
+            .social-buttons {
+                flex-direction: column;
+                align-items: stretch;
+                max-width: 300px;
+                margin: 0 auto;
             }
         }
     </style>

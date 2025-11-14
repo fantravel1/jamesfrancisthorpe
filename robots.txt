@@ -49,8 +49,8 @@ User-agent: DotBot
 Disallow: /
 
 # Sitemap location
-Sitemap: https://www.yourwebsite.com/sitemap.xml
+Sitemap: https://www.jamesfrancisthorpe.com/sitemap.xml
 
-# Additional sitemaps if you have them
-# Sitemap: https://www.yourwebsite.com/sitemap-images.xml
-# Sitemap: https://www.yourwebsite.com/sitemap-news.xml
+# Additional sitemaps can be added as needed
+# Sitemap: https://www.jamesfrancisthorpe.com/sitemap-images.xml
+# Sitemap: https://www.jamesfrancisthorpe.com/sitemap-news.xml
