@@ -348,14 +348,42 @@
         }
     </style>
     
-    <!-- Schema.org -->
+    <!-- Enhanced Schema.org -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "CollectionPage",
         "name": "Jim Thorpe Articles & Stories",
         "description": "In-depth articles about Jim Thorpe's life, achievements, and legacy",
-        "url": "https://www.jamesfrancisthorpe.com/articles"
+        "url": "https://www.jamesfrancisthorpe.com/articles",
+        "about": {
+            "@type": "Person",
+            "name": "Jim Thorpe"
+        },
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "James Francis Thorpe - The Greatest Athlete",
+            "url": "https://www.jamesfrancisthorpe.com/"
+        }
+    }
+    </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.jamesfrancisthorpe.com/"
+        },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Articles",
+            "item": "https://www.jamesfrancisthorpe.com/articles"
+        }]
     }
     </script>
 </head>
@@ -582,6 +610,17 @@
                 </article>
             </div>
         </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-box">
+                    <h2>Want the Complete Story?</h2>
+                    <p>Read Jim Thorpe's full biography from his birth on the Sac and Fox reservation to becoming the world's greatest athlete.</p>
+                    <a href="/story" class="cta-button">Read His Full Story</a>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -655,25 +694,78 @@
             user-select: none;
         }
         
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            padding: 5rem 0;
+            margin-top: 3rem;
+        }
+
+        .cta-box {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            color: white;
+        }
+
+        .cta-box h2 {
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-box p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: var(--gold);
+            color: var(--dark);
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .cta-button:hover {
+            background: white;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255,215,0,0.4);
+        }
+
         /* Smooth scrolling */
         html {
             scroll-behavior: smooth;
         }
-        
+
         /* Focus states for accessibility */
         a:focus, button:focus {
             outline: 3px solid var(--gold);
             outline-offset: 2px;
         }
-        
+
         @media (max-width: 768px) {
             .footer-links {
                 flex-direction: column;
                 gap: 0.5rem;
             }
-            
+
             .footer-links .separator {
                 display: none;
+            }
+
+            .cta-box h2 {
+                font-size: 2rem;
+            }
+
+            .cta-box p {
+                font-size: 1.1rem;
             }
         }
     </style>
