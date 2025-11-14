@@ -3,23 +3,23 @@
   <!-- Homepage -->
   <url>
     <loc>https://www.jamesfrancisthorpe.com/</loc>
-    <lastmod>2025-01-08</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
-  
+
   <!-- Story Page -->
   <url>
     <loc>https://www.jamesfrancisthorpe.com/story</loc>
-    <lastmod>2025-01-08</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
-  
+
   <!-- Articles Index -->
   <url>
     <loc>https://www.jamesfrancisthorpe.com/articles</loc>
-    <lastmod>2025-01-08</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -27,79 +27,115 @@
   <!-- About and Contact Page -->
   <url>
     <loc>https://www.jamesfrancisthorpe.com/about</loc>
-    <lastmod>2025-01-08</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- Featured Articles - High Priority -->
+  <url>
+    <loc>https://www.jamesfrancisthorpe.com/jim-thorpe-childhood-reservation-life</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.jamesfrancisthorpe.com/jim-thorpe-carlisle-indian-school</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.jamesfrancisthorpe.com/jim-thorpe-1912-stockholm-olympics</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.jamesfrancisthorpe.com/jim-thorpe-canton-bulldogs-nfl</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.jamesfrancisthorpe.com/jim-thorpe-baseball-career</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.9</priority>
+  </url>
   
-  <!-- Blog Pages -->
+  <!-- Additional Articles -->
   <url>
     <loc>https://www.jamesfrancisthorpe.com/what-sports-did-jim-thorpe-play</loc>
-    <lastmod>2025-01-08</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
-  
+
   <url>
     <loc>https://www.jamesfrancisthorpe.com/why-jim-thorpe-olympic-medals-taken</loc>
-    <lastmod>2025-01-08</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-  
+
   <url>
     <loc>https://www.jamesfrancisthorpe.com/when-jim-thorpe-medals-restored</loc>
-    <lastmod>2025-01-08</lastmod>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.jamesfrancisthorpe.com/bright-path-strong-campaign</loc>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
-  
-  <url>
-    <loc>https://www.jamesfrancisthorpe.com/bright-path-strong-campaign</loc>
-    <lastmod>2025-01-08</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
+
   <url>
     <loc>https://www.jamesfrancisthorpe.com/pop-warner-jim-thorpe</loc>
-    <lastmod>2025-01-08</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
-  
+
   <url>
     <loc>https://www.jamesfrancisthorpe.com/native-american-actors-guild</loc>
-    <lastmod>2025-01-08</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
-  
+
   <url>
     <loc>https://www.jamesfrancisthorpe.com/jim-thorpe-mismatched-shoes</loc>
-    <lastmod>2025-01-08</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
-  
+
   <url>
     <loc>https://www.jamesfrancisthorpe.com/jim-thorpe-vs-eisenhower</loc>
-    <lastmod>2025-01-08</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
-  
+
   <url>
     <loc>https://www.jamesfrancisthorpe.com/jim-thorpe-60-dollar-scandal</loc>
-    <lastmod>2025-01-08</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
-  
+
   <url>
     <loc>https://www.jamesfrancisthorpe.com/jim-thorpe-basketball-career</loc>
-    <lastmod>2025-01-08</lastmod>
+    <lastmod>2025-01-14</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
 </urlset>

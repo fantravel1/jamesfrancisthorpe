@@ -9,7 +9,20 @@
 
     <!-- Canonical -->
     <link rel="canonical" href="https://www.jamesfrancisthorpe.com/why-jim-thorpe-olympic-medals-taken">
-    
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Why Were Jim Thorpe's Olympic Medals Taken Away?">
+    <meta property="og:description" content="The story of how $60 in baseball earnings cost Jim Thorpe his Olympic gold medals due to racial discrimination and double standards.">
+    <meta property="og:image" content="https://www.jamesfrancisthorpe.com/images/thorpe-medals-og.jpg">
+    <meta property="og:url" content="https://www.jamesfrancisthorpe.com/why-jim-thorpe-olympic-medals-taken">
+    <meta property="og:type" content="article">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Why Were Jim Thorpe's Olympic Medals Taken Away?">
+    <meta name="twitter:description" content="The $60 scandal and racial injustice behind Jim Thorpe's stripped Olympic medals">
+    <meta name="twitter:image" content="https://www.jamesfrancisthorpe.com/images/thorpe-medals-twitter.jpg">
+
     <!-- Same Critical CSS as other pages -->
     <style>
         :root {
@@ -263,7 +276,110 @@
             padding: 2rem;
             margin: 2rem 0;
         }
-        
+
+        /* Reading Progress Bar */
+        .reading-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gold), var(--primary));
+            z-index: 1001;
+            transition: width 0.1s ease;
+        }
+
+        /* Article Meta Top */
+        .article-meta-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 1.5rem 0;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--light);
+        }
+
+        .reading-time {
+            font-size: 1rem;
+            color: #666;
+            font-weight: 600;
+        }
+
+        .share-buttons-inline {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .share-label {
+            font-size: 0.95rem;
+            color: #666;
+            font-weight: 600;
+        }
+
+        .share-icon {
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            display: inline-block;
+        }
+
+        .share-icon:hover {
+            transform: translateY(-3px) scale(1.1);
+        }
+
+        /* Related Articles */
+        .related-articles {
+            margin-top: 4rem;
+            padding: 3rem;
+            background: var(--light);
+            border-radius: 1rem;
+            border-top: 4px solid var(--gold);
+        }
+
+        .related-articles h3 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .related-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 0.8rem;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .related-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            border-left-color: var(--gold);
+        }
+
+        .related-card h4 {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .related-card p {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
         @media (max-width: 768px) {
             .menu-toggle {
                 display: block;
@@ -309,7 +425,56 @@
         }
     </style>
     
-    <!-- Schema.org FAQ -->
+    <!-- Enhanced Article Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Why Were Jim Thorpe's Olympic Medals Taken Away?",
+        "alternativeHeadline": "The Story of Injustice and Discrimination Behind the Medal Scandal",
+        "author": {
+            "@type": "Organization",
+            "name": "Pillar Media & Entertainment"
+        },
+        "datePublished": "2025-01-08",
+        "dateModified": "2025-01-08",
+        "description": "Jim Thorpe's Olympic medals were stripped in 1913 due to strict amateurism rules after he played semi-pro baseball for $60 per month, despite many white athletes doing the same.",
+        "about": {
+            "@type": "Person",
+            "name": "Jim Thorpe"
+        },
+        "wordCount": "1200",
+        "timeRequired": "PT6M",
+        "articleSection": "Sports History",
+        "keywords": "Jim Thorpe, Olympic medals, 1912 Olympics, amateurism scandal, sports discrimination, Native American athletes"
+    }
+    </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.jamesfrancisthorpe.com/"
+        },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Articles",
+            "item": "https://www.jamesfrancisthorpe.com/articles"
+        },{
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Why Were Jim Thorpe's Olympic Medals Taken Away?",
+            "item": "https://www.jamesfrancisthorpe.com/why-jim-thorpe-olympic-medals-taken"
+        }]
+    }
+    </script>
+
+    <!-- Expanded FAQ Schema for AEO -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -319,7 +484,35 @@
             "name": "Why were Jim Thorpe's Olympic medals taken away?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Jim Thorpe's Olympic medals were stripped in January 1913 due to a violation of strict amateurism rules. A reporter discovered Thorpe had played semi-professional baseball in North Carolina during summers of 1909-1910, earning approximately $60 per month."
+                "text": "Jim Thorpe's Olympic medals were stripped in January 1913 because he played semi-professional baseball in 1909-1910, earning $60 per month. This violated strict amateur rules, though many white athletes did the same without consequences."
+            }
+        },{
+            "@type": "Question",
+            "name": "How much money did Jim Thorpe earn playing baseball?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Jim Thorpe earned approximately $60 per month ($2-3 per game) playing semi-professional baseball in North Carolina's Eastern Carolina League during the summers of 1909 and 1910, totaling about $360 over two years."
+            }
+        },{
+            "@type": "Question",
+            "name": "Did other athletes do the same thing as Jim Thorpe?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, many white college athletes from Harvard, Yale, and Princeton routinely played semi-professional sports under assumed names without consequences. Only Thorpe, who used his real name, was caught and punished."
+            }
+        },{
+            "@type": "Question",
+            "name": "Was stripping Jim Thorpe's medals legal?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No, the IOC had a 30-day protest rule for challenging Olympic results. The revelation came 6 months after the 1912 Olympics, far past the deadline, making the protest technically invalid by the IOC's own rules."
+            }
+        },{
+            "@type": "Question",
+            "name": "Did anyone refuse Jim Thorpe's stolen medals?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, Swedish athlete Hugo Wieslander and Norwegian Ferdinand Bie both refused to accept Thorpe's reallocated gold medals, maintaining throughout their lives that Thorpe was the rightful Olympic champion."
             }
         }]
     }
@@ -343,6 +536,9 @@
         </div>
     </nav>
 
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress" id="reading-progress"></div>
+
     <!-- Hero Section -->
     <header class="story-hero">
         <div>
@@ -357,6 +553,17 @@
             <a href="/" class="back-link">
                 ← Back to Home
             </a>
+
+            <!-- Reading Time & Share -->
+            <div class="article-meta-top">
+                <span class="reading-time">⏱️ 6 min read</span>
+                <div class="share-buttons-inline">
+                    <span class="share-label">Share:</span>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.jamesfrancisthorpe.com/why-jim-thorpe-olympic-medals-taken" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook" class="share-icon">📘</a>
+                    <a href="https://twitter.com/intent/tweet?url=https://www.jamesfrancisthorpe.com/why-jim-thorpe-olympic-medals-taken&text=Why Were Jim Thorpe's Olympic Medals Taken Away?" target="_blank" rel="noopener noreferrer" aria-label="Share on Twitter" class="share-icon">𝕏</a>
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.jamesfrancisthorpe.com/why-jim-thorpe-olympic-medals-taken" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn" class="share-icon">💼</a>
+                </div>
+            </div>
 
             <p>Jim Thorpe's Olympic medals were stripped in January 1913 due to a violation of strict amateurism rules. This decision, rooted in discrimination and double standards, would stand as one of sports' greatest injustices for over a century.</p>
 
@@ -453,8 +660,27 @@
 
             <p>The injustice would not be fully corrected until 2022—110 years after Thorpe's Olympic victories—when the IOC finally restored him as the sole champion of the 1912 pentathlon and decathlon.</p>
 
-            <div class="back-link" style="margin-top: 3rem;">
-                <a href="/when-jim-thorpe-medals-restored">→ Learn About the Medal Restoration</a>
+            <!-- Related Articles -->
+            <div class="related-articles">
+                <h3>Continue Exploring Jim Thorpe's Story</h3>
+                <div class="related-grid">
+                    <a href="/when-jim-thorpe-medals-restored" class="related-card">
+                        <h4>When Were the Medals Restored?</h4>
+                        <p>The 110-year journey to justice and full Olympic recognition in 2022.</p>
+                    </a>
+                    <a href="/jim-thorpe-60-dollar-scandal" class="related-card">
+                        <h4>The $60 That Changed History</h4>
+                        <p>How Jim Thorpe's summer baseball earnings became the most expensive $60 in sports.</p>
+                    </a>
+                    <a href="/bright-path-strong-campaign" class="related-card">
+                        <h4>The Bright Path Strong Campaign</h4>
+                        <p>How Jim Thorpe's family finally won justice through grassroots activism.</p>
+                    </a>
+                    <a href="/story" class="related-card">
+                        <h4>Read His Full Story →</h4>
+                        <p>The complete biography of the world's greatest athlete.</p>
+                    </a>
+                </div>
             </div>
         </div>
     </main>
@@ -464,7 +690,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-main">
-                    <p>&copy; 2025 James Francis Thorpe Legacy Foundation. All rights reserved.</p>
+                    <p>&copy; 2025 Pillar Media & Entertainment. All rights reserved.</p>
                     <p>Honoring the greatest athlete in the world.</p>
                 </div>
                 <div class="footer-links">
@@ -569,10 +795,10 @@
         });
         
         const navbar = document.getElementById('navbar');
-        
+
         window.addEventListener('scroll', () => {
             const currentScroll = window.pageYOffset;
-            
+
             if (currentScroll > 100) {
                 navbar.style.background = 'rgba(26,26,26,0.98)';
                 navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.3)';
@@ -580,6 +806,18 @@
                 navbar.style.background = 'rgba(26,26,26,0.95)';
                 navbar.style.boxShadow = 'none';
             }
+        });
+
+        // Reading progress bar
+        const progressBar = document.getElementById('reading-progress');
+
+        window.addEventListener('scroll', () => {
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight - windowHeight;
+            const scrolled = window.scrollY;
+            const progress = (scrolled / documentHeight) * 100;
+
+            progressBar.style.width = progress + '%';
         });
     </script>
 </body>
