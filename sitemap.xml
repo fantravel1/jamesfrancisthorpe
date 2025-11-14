@@ -32,6 +32,14 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Photo Gallery -->
+  <url>
+    <loc>https://www.jamesfrancisthorpe.com/gallery</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Featured Articles - High Priority -->
   <url>
     <loc>https://www.jamesfrancisthorpe.com/jim-thorpe-childhood-reservation-life</loc>
