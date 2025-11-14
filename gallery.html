@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore rare historical photographs of Jim Thorpe from the 1912 Olympics, Carlisle Indian School, professional football and baseball careers. Public domain images from Library of Congress and archives.">
+    <meta name="keywords" content="Jim Thorpe photos, historical photographs, 1912 Olympics images, Carlisle Indian School, vintage sports photography, Native American athlete">
+    <meta name="author" content="Pillar Media & Entertainment">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.jamesfrancisthorpe.com/gallery.html">
+    <meta property="og:title" content="Jim Thorpe Photo Gallery - Historical Images">
+    <meta property="og:description" content="Rare historical photographs of the world's greatest athlete from 1912 Olympics, Carlisle, and his professional sports careers.">
+    <meta property="og:image" content="https://www.jamesfrancisthorpe.com/images/gallery-og.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.jamesfrancisthorpe.com/gallery.html">
+    <meta property="twitter:title" content="Jim Thorpe Photo Gallery - Historical Images">
+    <meta property="twitter:description" content="Rare historical photographs of the world's greatest athlete from 1912 Olympics, Carlisle, and his professional sports careers.">
+    <meta property="twitter:image" content="https://www.jamesfrancisthorpe.com/images/gallery-twitter.jpg">
+
+    <link rel="canonical" content="https://www.jamesfrancisthorpe.com/gallery.html">
+    <title>Jim Thorpe Photo Gallery | Historical Images from 1912 Olympics & Beyond</title>
+
+    <!-- ImageGallery Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ImageGallery",
+        "name": "Jim Thorpe Historical Photo Gallery",
+        "description": "Historical photographs of Jim Thorpe spanning his Olympic triumphs, Carlisle years, and professional sports careers",
+        "url": "https://www.jamesfrancisthorpe.com/gallery.html",
+        "about": {
+            "@type": "Person",
+            "name": "Jim Thorpe",
+            "birthDate": "1887-05-28",
+            "deathDate": "1953-03-28"
+        },
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "James Francis Thorpe - The Greatest Athlete",
+            "url": "https://www.jamesfrancisthorpe.com/"
+        }
+    }
+    </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.jamesfrancisthorpe.com/"
+        },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Photo Gallery",
+            "item": "https://www.jamesfrancisthorpe.com/gallery.html"
+        }]
+    }
+    </script>
+
+    <style>
+        * {margin: 0;padding: 0;box-sizing: border-box;}
+        body {font-family: 'Georgia', serif;line-height: 1.8;color: #2c3e50;background: #f8f9fa;}
+
+        /* Navigation */
+        nav {background: #1a1a1a;padding: 1rem 0;position: sticky;top: 0;z-index: 100;box-shadow: 0 2px 10px rgba(0,0,0,0.1);}
+        nav ul {list-style: none;display: flex;justify-content: center;flex-wrap: wrap;gap: 2rem;padding: 0 1rem;}
+        nav a {color: #fff;text-decoration: none;font-weight: 500;transition: color 0.3s;padding: 0.5rem 1rem;border-radius: 0.5rem;min-height: 48px;display: flex;align-items: center;}
+        nav a:hover {color: #c41e3a;background: rgba(196,30,58,0.1);}
+
+        /* Breadcrumb */
+        .breadcrumb {background: #fff;padding: 1rem 2rem;border-bottom: 1px solid #e0e0e0;}
+        .breadcrumb a {color: #0051ba;text-decoration: none;}
+        .breadcrumb a:hover {text-decoration: underline;}
+        .breadcrumb span {color: #666;margin: 0 0.5rem;}
+
+        /* Hero */
+        .gallery-hero {background: linear-gradient(135deg, #0051ba 0%, #c41e3a 100%);color: white;padding: 4rem 2rem;text-align: center;}
+        .gallery-hero h1 {font-size: 3rem;margin-bottom: 1rem;text-shadow: 2px 2px 4px rgba(0,0,0,0.3);}
+        .gallery-hero .subtitle {font-size: 1.3rem;font-style: italic;opacity: 0.95;}
+
+        /* Container */
+        .container {max-width: 1400px;margin: 0 auto;padding: 3rem 2rem;}
+
+        /* Category Section */
+        .category-section {margin-bottom: 4rem;}
+        .category-title {font-size: 2.5rem;color: #0051ba;margin-bottom: 1rem;border-left: 4px solid #c41e3a;padding-left: 1rem;}
+        .category-description {font-size: 1.1rem;color: #666;margin-bottom: 2rem;line-height: 1.6;}
+
+        /* Gallery Grid */
+        .gallery-grid {display: grid;grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));gap: 2rem;margin-bottom: 3rem;}
+
+        /* Gallery Item */
+        .gallery-item {position: relative;overflow: hidden;border-radius: 8px;box-shadow: 0 4px 12px rgba(0,0,0,0.1);transition: all 0.3s ease;cursor: pointer;background: white;}
+        .gallery-item:hover {transform: translateY(-5px);box-shadow: 0 8px 20px rgba(0,0,0,0.15);}
+
+        .gallery-item img {width: 100%;height: 300px;object-fit: cover;display: block;transition: transform 0.3s ease;}
+        .gallery-item:hover img {transform: scale(1.05);}
+
+        .gallery-caption {padding: 1.5rem;background: white;}
+        .gallery-caption h3 {font-size: 1.2rem;color: #0051ba;margin-bottom: 0.5rem;}
+        .gallery-caption p {font-size: 0.95rem;color: #666;line-height: 1.5;}
+        .gallery-caption .source {font-size: 0.85rem;color: #999;margin-top: 0.5rem;font-style: italic;}
+
+        /* Lightbox */
+        .lightbox {display: none;position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,0.95);z-index: 10000;justify-content: center;align-items: center;}
+        .lightbox.active {display: flex;}
+
+        .lightbox-content {position: relative;max-width: 90%;max-height: 90%;display: flex;flex-direction: column;align-items: center;}
+
+        .lightbox-image {max-width: 100%;max-height: 80vh;object-fit: contain;border-radius: 4px;}
+
+        .lightbox-caption {color: white;padding: 1.5rem;text-align: center;max-width: 800px;}
+        .lightbox-caption h3 {font-size: 1.5rem;margin-bottom: 0.5rem;}
+        .lightbox-caption p {font-size: 1rem;opacity: 0.9;line-height: 1.6;}
+
+        .lightbox-close {position: absolute;top: 2rem;right: 2rem;font-size: 3rem;color: white;background: none;border: none;cursor: pointer;width: 48px;height: 48px;display: flex;align-items: center;justify-content: center;transition: transform 0.2s;}
+        .lightbox-close:hover {transform: scale(1.2);}
+
+        .lightbox-nav {position: absolute;top: 50%;transform: translateY(-50%);background: rgba(255,255,255,0.2);border: none;color: white;font-size: 3rem;padding: 1rem;cursor: pointer;border-radius: 4px;min-width: 48px;min-height: 48px;transition: background 0.3s;}
+        .lightbox-nav:hover {background: rgba(255,255,255,0.3);}
+        .lightbox-prev {left: 2rem;}
+        .lightbox-next {right: 2rem;}
+
+        /* Info Box */
+        .info-box {background: linear-gradient(135deg, #fff5f5 0%, #f0f8ff 100%);border: 2px solid #0051ba;border-radius: 8px;padding: 2rem;margin-bottom: 3rem;}
+        .info-box h2 {color: #0051ba;margin-bottom: 1rem;}
+        .info-box ul {margin-left: 2rem;margin-top: 1rem;}
+        .info-box li {margin-bottom: 0.5rem;}
+        .info-box a {color: #0051ba;font-weight: 600;}
+
+        /* Placeholder Image */
+        .placeholder-img {width: 100%;height: 300px;background: linear-gradient(135deg, #e0e0e0 0%, #f0f0f0 100%);display: flex;align-items: center;justify-content: center;color: #999;font-size: 3rem;}
+
+        /* Footer */
+        footer {background: #1a1a1a;color: #fff;text-align: center;padding: 2rem;margin-top: 4rem;}
+        footer a {color: #c41e3a;text-decoration: none;}
+        footer a:hover {text-decoration: underline;}
+
+        @media (max-width: 768px) {
+            .gallery-hero h1 {font-size: 2rem;}
+            .gallery-hero .subtitle {font-size: 1.1rem;}
+            nav ul {gap: 1rem;}
+            .container {padding: 2rem 1rem;}
+            .gallery-grid {grid-template-columns: 1fr;gap: 1.5rem;}
+            .category-title {font-size: 2rem;}
+            .lightbox-nav {font-size: 2rem;padding: 0.5rem;}
+            .lightbox-prev {left: 0.5rem;}
+            .lightbox-next {right: 0.5rem;}
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="story.html">Story</a></li>
+            <li><a href="articles.html">Articles</a></li>
+            <li><a href="gallery.html" style="background: rgba(196,30,58,0.1);">Gallery</a></li>
+        </ul>
+    </nav>
+
+    <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <span>Photo Gallery</span>
+    </div>
+
+    <header class="gallery-hero">
+        <div>
+            <h1>Historical Photo Gallery</h1>
+            <p class="subtitle">Rare Images of the World's Greatest Athlete</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Info Box -->
+        <div class="info-box">
+            <h2>About These Images</h2>
+            <p>This gallery features historical photographs from public domain sources including:</p>
+            <ul>
+                <li><a href="https://www.loc.gov/pictures/" target="_blank" rel="noopener">Library of Congress Prints & Photographs Division</a> - Harris & Ewing Collection</li>
+                <li><a href="https://commons.wikimedia.org/wiki/Category:Jim_Thorpe" target="_blank" rel="noopener">Wikimedia Commons</a> - Historical sports photography</li>
+                <li><a href="http://home.epix.net/~landis/thorphoto.html" target="_blank" rel="noopener">Cumberland County Historical Society</a> - Carlisle Indian School archives</li>
+                <li>National Archives and university collections</li>
+            </ul>
+            <p style="margin-top: 1rem;">All images are in the public domain with no known restrictions on publication. Click any image to view full size.</p>
+        </div>
+
+        <!-- 1912 Olympics Section -->
+        <section class="category-section">
+            <h2 class="category-title">1912 Stockholm Olympics</h2>
+            <p class="category-description">Photographs from Jim Thorpe's legendary Olympic triumph, where he won gold medals in both pentathlon and decathlon, prompting King Gustav V to declare him "the greatest athlete in the world."</p>
+
+            <div class="gallery-grid">
+                <div class="gallery-item" data-index="0">
+                    <div class="placeholder-img">📷</div>
+                    <div class="gallery-caption">
+                        <h3>Jim Thorpe at 1912 Olympics</h3>
+                        <p>Jim Thorpe in his track uniform during the 1912 Stockholm Olympics. This iconic image captures the moment before his historic pentathlon and decathlon victories.</p>
+                        <p class="source">Source: Wikimedia Commons / Library of Congress</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-index="1">
+                    <div class="placeholder-img">📷</div>
+                    <div class="gallery-caption">
+                        <h3>King Gustav Awards Medal</h3>
+                        <p>King Gustav V of Sweden presents Jim Thorpe with his Olympic gold medal and laurel wreath at the 1912 Stockholm Games medal ceremony.</p>
+                        <p class="source">Source: Cumberland County Historical Society</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-index="2">
+                    <div class="placeholder-img">📷</div>
+                    <div class="gallery-caption">
+                        <h3>200-Meter Pentathlon Win</h3>
+                        <p>Thorpe winning the 200-meter dash, one of five events in the pentathlon where he placed first in four events.</p>
+                        <p class="source">Source: Cumberland County Historical Society</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-index="3">
+                    <div class="placeholder-img">📷</div>
+                    <div class="gallery-caption">
+                        <h3>Shot Put - 1912 Olympics</h3>
+                        <p>Jim Thorpe competing in the shot put event during the decathlon at the 1912 Stockholm Olympics.</p>
+                        <p class="source">Source: Cumberland County Historical Society</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Carlisle Years Section -->
+        <section class="category-section">
+            <h2 class="category-title">Carlisle Indian School (1904-1913)</h2>
+            <p class="category-description">Images from Thorpe's transformative years at Carlisle Indian Industrial School in Pennsylvania, where he became America's greatest college football player under coach Pop Warner.</p>
+
+            <div class="gallery-grid">
+                <div class="gallery-item" data-index="4">
+                    <div class="placeholder-img">📷</div>
+                    <div class="gallery-caption">
+                        <h3>Carlisle Football Team</h3>
+                        <p>The 1911 Carlisle Indians football team, featuring Jim Thorpe. This team defeated Harvard 18-15 in one of the greatest upsets in college football history.</p>
+                        <p class="source">Source: Cumberland County Historical Society</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-index="5">
+                    <div class="placeholder-img">📷</div>
+                    <div class="gallery-caption">
+                        <h3>Thorpe in Carlisle Uniform</h3>
+                        <p>Jim Thorpe in his iconic Carlisle Indians football uniform, circa 1911-1912.</p>
+                        <p class="source">Source: Library of Congress / Harris & Ewing</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-index="6">
+                    <div class="placeholder-img">📷</div>
+                    <div class="gallery-caption">
+                        <h3>Track & Field at Carlisle</h3>
+                        <p>Thorpe competing in track and field events at Carlisle, where he excelled in multiple disciplines including high jump, javelin, and sprints.</p>
+                        <p class="source">Source: Cumberland County Historical Society</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Football Section -->
+        <section class="category-section">
+            <h2 class="category-title">Professional Football Career</h2>
+            <p class="category-description">Photographs from Thorpe's professional football career with the Canton Bulldogs and other teams, including his role as the first president of the NFL.</p>
+
+            <div class="gallery-grid">
+                <div class="gallery-item" data-index="7">
+                    <div class="placeholder-img">📷</div>
+                    <div class="gallery-caption">
+                        <h3>Canton Bulldogs Star</h3>
+                        <p>Jim Thorpe in his Canton Bulldogs uniform, where he earned $250 per game and led the team to three championships (1916, 1917, 1919).</p>
+                        <p class="source">Source: Library of Congress / Harris & Ewing</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-index="8">
+                    <div class="placeholder-img">📷</div>
+                    <div class="gallery-caption">
+                        <h3>Football Action Shot</h3>
+                        <p>Thorpe in action during a professional football game, demonstrating the versatility that made him professional football's first superstar.</p>
+                        <p class="source">Source: Library of Congress Collection</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Baseball Career Section -->
+        <section class="category-section">
+            <h2 class="category-title">Professional Baseball (1913-1919)</h2>
+            <p class="category-description">Images from Thorpe's six-year Major League Baseball career with the New York Giants, Cincinnati Reds, and Boston Braves.</p>
+
+            <div class="gallery-grid">
+                <div class="gallery-item" data-index="9">
+                    <div class="placeholder-img">📷</div>
+                    <div class="gallery-caption">
+                        <h3>New York Giants Uniform</h3>
+                        <p>Jim Thorpe in his New York Giants baseball uniform, circa 1913-1915. He signed with legendary manager John McGraw for $18,000.</p>
+                        <p class="source">Source: Library of Congress / Harris & Ewing</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-index="10">
+                    <div class="placeholder-img">📷</div>
+                    <div class="gallery-caption">
+                        <h3>Baseball Portrait</h3>
+                        <p>Studio portrait of Thorpe during his baseball years. He ended his career in 1919 hitting .327 for the Boston Braves.</p>
+                        <p class="source">Source: Library of Congress Collection</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Later Years Section -->
+        <section class="category-section">
+            <h2 class="category-title">Later Years & Legacy</h2>
+            <p class="category-description">Photographs from Thorpe's later life, including his Hollywood career, family life, and recognition as the greatest athlete of the half-century.</p>
+
+            <div class="gallery-grid">
+                <div class="gallery-item" data-index="11">
+                    <div class="placeholder-img">📷</div>
+                    <div class="gallery-caption">
+                        <h3>Hollywood Years</h3>
+                        <p>Jim Thorpe during his Hollywood career in the 1930s-40s, where he appeared in numerous films and founded the Native American Actors Guild.</p>
+                        <p class="source">Source: Public Domain Archives</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-index="12">
+                    <div class="placeholder-img">📷</div>
+                    <div class="gallery-caption">
+                        <h3>1950 AP Award Ceremony</h3>
+                        <p>Thorpe receiving recognition as the Associated Press "Greatest Athlete of the Half-Century" in 1950, three years before his death.</p>
+                        <p class="source">Source: AP Photo Archives</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close lightbox">×</button>
+        <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous image">‹</button>
+        <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next image">›</button>
+
+        <div class="lightbox-content">
+            <img src="" alt="" class="lightbox-image" id="lightbox-image">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Pillar Media & Entertainment. All rights reserved.</p>
+        <p><a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="story.html">Story</a> | <a href="articles.html">Articles</a> | <a href="gallery.html">Gallery</a></p>
+    </footer>
+
+    <script>
+        // Gallery data with image paths (to be populated)
+        const galleryData = [
+            {title: "Jim Thorpe at 1912 Olympics", description: "Jim Thorpe in his track uniform during the 1912 Stockholm Olympics.", src: "/images/gallery/thorpe-1912-olympics-1.jpg"},
+            {title: "King Gustav Awards Medal", description: "King Gustav V presents Thorpe with his gold medal at 1912 ceremony.", src: "/images/gallery/thorpe-medal-ceremony.jpg"},
+            {title: "200-Meter Pentathlon Win", description: "Thorpe winning the 200-meter dash in the pentathlon.", src: "/images/gallery/thorpe-200m-1912.jpg"},
+            {title: "Shot Put - 1912 Olympics", description: "Thorpe competing in shot put during the decathlon.", src: "/images/gallery/thorpe-shotput-1912.jpg"},
+            {title: "Carlisle Football Team", description: "The 1911 Carlisle Indians football team featuring Jim Thorpe.", src: "/images/gallery/carlisle-team-1911.jpg"},
+            {title: "Thorpe in Carlisle Uniform", description: "Jim Thorpe in his Carlisle Indians uniform, circa 1911-1912.", src: "/images/gallery/thorpe-carlisle-uniform.jpg"},
+            {title: "Track & Field at Carlisle", description: "Thorpe competing in track and field at Carlisle.", src: "/images/gallery/thorpe-carlisle-track.jpg"},
+            {title: "Canton Bulldogs Star", description: "Thorpe in Canton Bulldogs uniform earning $250 per game.", src: "/images/gallery/thorpe-canton-bulldogs.jpg"},
+            {title: "Football Action Shot", description: "Thorpe in action during a professional football game.", src: "/images/gallery/thorpe-football-action.jpg"},
+            {title: "New York Giants Uniform", description: "Thorpe in New York Giants baseball uniform, 1913-1915.", src: "/images/gallery/thorpe-giants-uniform.jpg"},
+            {title: "Baseball Portrait", description: "Studio portrait of Thorpe during his baseball years.", src: "/images/gallery/thorpe-baseball-portrait.jpg"},
+            {title: "Hollywood Years", description: "Thorpe during his Hollywood career in the 1930s-40s.", src: "/images/gallery/thorpe-hollywood.jpg"},
+            {title: "1950 AP Award Ceremony", description: "Thorpe receiving AP Greatest Athlete of Half-Century award.", src: "/images/gallery/thorpe-ap-award-1950.jpg"}
+        ];
+
+        let currentImageIndex = 0;
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightbox-image');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+        const lightboxClose = document.getElementById('lightbox-close');
+        const lightboxPrev = document.getElementById('lightbox-prev');
+        const lightboxNext = document.getElementById('lightbox-next');
+
+        // Open lightbox
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', function() {
+                currentImageIndex = parseInt(this.getAttribute('data-index'));
+                openLightbox(currentImageIndex);
+            });
+        });
+
+        function openLightbox(index) {
+            const data = galleryData[index];
+            lightboxImage.src = data.src;
+            lightboxImage.alt = data.title;
+            lightboxCaption.innerHTML = `<h3>${data.title}</h3><p>${data.description}</p>`;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Close lightbox
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox) closeLightbox();
+        });
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Navigate lightbox
+        lightboxPrev.addEventListener('click', function(e) {
+            e.stopPropagation();
+            currentImageIndex = (currentImageIndex - 1 + galleryData.length) % galleryData.length;
+            openLightbox(currentImageIndex);
+        });
+
+        lightboxNext.addEventListener('click', function(e) {
+            e.stopPropagation();
+            currentImageIndex = (currentImageIndex + 1) % galleryData.length;
+            openLightbox(currentImageIndex);
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (!lightbox.classList.contains('active')) return;
+
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') {
+                currentImageIndex = (currentImageIndex - 1 + galleryData.length) % galleryData.length;
+                openLightbox(currentImageIndex);
+            }
+            if (e.key === 'ArrowRight') {
+                currentImageIndex = (currentImageIndex + 1) % galleryData.length;
+                openLightbox(currentImageIndex);
+            }
+        });
+    </script>
+</body>
+</html>
