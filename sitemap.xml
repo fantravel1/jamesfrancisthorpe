@@ -146,4 +146,26 @@
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- New SEO-Optimized Pages -->
+  <url>
+    <loc>https://www.jamesfrancisthorpe.com/jim-thorpe-net-worth</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.jamesfrancisthorpe.com/jim-thorpe-lacrosse</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.jamesfrancisthorpe.com/jim-thorpe-nationality</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
